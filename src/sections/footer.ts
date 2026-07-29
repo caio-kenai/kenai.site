@@ -39,7 +39,16 @@ export function renderFooter(): string {
           <p class="footer__legal">
             <span>© ${year} ${profile.name}</span>
             <span class="footer__sep" aria-hidden="true">·</span>
-            <span ${tx('footer.license')}>${t('footer.license')}</span>
+            <!-- A AGPL pede que a interface diga sob qual licenca o programa
+                 esta e como ler uma copia dela. -->
+            <a
+              class="footer__license"
+              href="${profile.links.repo}/blob/main/LICENSE"
+              target="_blank"
+              rel="noopener noreferrer license"
+              ${tx('footer.license')}
+              >${t('footer.license')}</a
+            >
           </p>
         </div>
       </div>
