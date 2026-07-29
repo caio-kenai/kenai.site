@@ -9,18 +9,22 @@ export interface Localized {
 
 export type Theme = 'dark' | 'light';
 
-/** Situacao atual de uma tecnologia na minha stack. */
-export type StackStatus = 'using' | 'learning';
+/** Conjunto de icones em que o logo esta guardado (public/icons/<set>/). */
+export type IconSet = 'tech' | 'lab';
 
-export interface StackItem {
+export interface Tech {
   name: string;
-  status: StackStatus;
+  /** Arquivo do logo, sem extensao. Ausente = tecnologia sem logo publico. */
+  slug?: string;
+  set?: IconSet;
+  /** Logos monocromaticos escuros precisam ser invertidos no tema escuro. */
+  invertOnDark?: boolean;
 }
 
-export interface StackGroup {
+export interface TechGroup {
   id: string;
   label: Localized;
-  items: StackItem[];
+  items: Tech[];
 }
 
 /** Servico do homelab ou software livre de uso diario. */
@@ -31,6 +35,8 @@ export interface HomelabEntry {
   domain: Localized;
   /** Endereco do projeto upstream. */
   url: string;
+  /** Arquivo do logo em public/icons/lab/. Ausente = usa monograma. */
+  slug?: string;
 }
 
 export type JourneyKind = 'work' | 'education';

@@ -1,121 +1,147 @@
-.stack__legend {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+/* ==========================================================================
+   LOGO (compartilhado entre a stack e o homelab)
+   ========================================================================== */
+
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
-.stack__legend-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
+/* Logos monocromaticos escuros sumiriam no fundo grafite. */
+[data-theme='dark'] .logo--invert-dark {
+  filter: invert(1) brightness(1.6);
 }
 
-.stack__marker {
-  width: 7px;
-  height: 7px;
-  flex: none;
-  border-radius: 2px;
-  background: var(--accent);
-}
-
-.stack__legend-item--learning .stack__marker,
-.stack__item--learning .stack__marker {
-  background: transparent;
-  border: 1.5px solid var(--faint);
-}
-
-/* A contagem de colunas e fixa por faixa para que os 6 grupos sempre
-   preencham a grade por inteiro — com auto-fit sobrariam celulas vazias,
-   que apareceriam como blocos da cor das linhas. */
-.stack__grid {
+.logo--monogram {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--border);
-  background: var(--line);
-  border: var(--border) solid var(--line);
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: var(--border) solid rgba(var(--accent-rgb), 0.35);
   border-radius: var(--radius);
-  overflow: hidden;
 }
 
-.stack__group {
-  background: var(--bg);
-  padding: clamp(1.25rem, 2.4vw, 1.9rem);
-  transition: background-color var(--dur-fast) var(--ease-out);
+/* ==========================================================================
+   GRADE DE TECNOLOGIAS
+   ========================================================================== */
+
+.tech-groups {
+  display: grid;
+  gap: clamp(2rem, 4vw, 3rem);
 }
 
-.stack__group:hover {
-  background: var(--surface);
-}
-
-.stack__group-title {
+.tech-group__title {
   display: flex;
   align-items: baseline;
   gap: 0.6rem;
-  font-size: var(--step-1);
-  margin-bottom: 1.1rem;
-  padding-bottom: 0.8rem;
+  font-size: var(--step--1);
+  letter-spacing: 0.18em;
+  color: var(--faint);
+  padding-bottom: 0.85rem;
+  margin-bottom: 1.4rem;
   border-bottom: var(--border) solid var(--line);
 }
 
-.stack__group-index {
+.tech-group__index {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 700;
   color: var(--accent);
 }
 
-.stack__items {
+/* Seis colunas fixas: o maior grupo preenche a linha exata e todos os grupos
+   ficam com o mesmo tamanho de bloco. Com auto-fill sobravam trilhas vazias
+   e um terco da largura ficava ocioso. */
+.tech-grid {
   display: grid;
-  gap: 0.5rem;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(0.6rem, 1.5vw, 1rem);
 }
 
-.stack__item {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-size: var(--step-0);
+.tech {
+  display: grid;
+  justify-items: center;
+  gap: 0.7rem;
+  padding: 1.1rem 0.65rem 0.95rem;
+  border: var(--border) solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  transition: border-color var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out), background-color var(--dur-fast) var(--ease-out);
+}
+
+.tech:hover {
+  border-color: rgba(var(--accent-rgb), 0.5);
+  background: var(--surface-2);
+  transform: translateY(-3px);
+}
+
+.tech .logo,
+.tech .logo--monogram {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.tech__name {
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  text-align: center;
   color: var(--muted);
-  transition: color var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+  line-height: 1.35;
 }
 
-.stack__item:hover {
+.tech:hover .tech__name {
   color: var(--text);
-  transform: translateX(3px);
 }
 
-.stack__item--learning .stack__name {
-  color: var(--faint);
-  font-style: italic;
-}
+/* ==========================================================================
+   LISTAS COMPLEMENTARES
+   ========================================================================== */
 
-/* -- base teorica -- */
-.stack__foundations {
-  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+.stack__extras {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(1.75rem, 4vw, 3rem);
+  margin-top: clamp(2.75rem, 5vw, 4rem);
   padding-top: clamp(1.75rem, 3vw, 2.25rem);
   border-top: var(--border) solid var(--line);
 }
 
-.stack__foundations-title {
+.stack__extra-title {
   font-size: var(--step--1);
   letter-spacing: 0.18em;
   color: var(--faint);
   margin-bottom: 1rem;
 }
 
-.stack__foundations-list {
+.stack__extra-list {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
 
-@media (max-width: 900px) {
-  .stack__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+@media (max-width: 1000px) {
+  .tech-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 560px) {
-  .stack__grid {
-    grid-template-columns: 1fr;
+@media (max-width: 700px) {
+  .tech-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 420px) {
+  .tech-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

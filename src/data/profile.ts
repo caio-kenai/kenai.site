@@ -27,7 +27,7 @@ export const profile = {
     en: 'Ipatinga, Minas Gerais — Brazil',
   } satisfies Localized,
 
-  email: 'caiokenai10@gmail.com',
+  email: 'caiokenai@tutamail.com',
 
   links: {
     github: 'https://github.com/caio-kenai',

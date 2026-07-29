@@ -65,6 +65,13 @@
   transform: scaleY(1);
 }
 
+.lab__logo {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 0.5rem;
+}
+
 .lab__domain {
   font-size: 0.66rem;
   letter-spacing: 0.16em;

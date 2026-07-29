@@ -1,6 +1,7 @@
 import { interests } from '../data/i18n';
 import { selfHostedCount } from '../data/homelab';
 import { stackCount } from '../data/stack';
+import { profile } from '../data/profile';
 import { esc, t, tx } from '../lib/dom';
 import { getLang, onLangChange } from '../lib/state';
 import type { StringKey } from '../data/i18n';
@@ -41,7 +42,19 @@ export function renderAbout(): string {
             </div>
           </div>
 
-          <dl class="about__stats reveal">
+          <div class="about__aside">
+            <figure class="about__portrait reveal">
+              <img
+                src="/img/caio.webp"
+                width="502"
+                height="1200"
+                alt="${esc(profile.name)}"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+
+            <dl class="about__stats reveal">
             ${stats
               .map(
                 (stat, index) => `
@@ -51,7 +64,8 @@ export function renderAbout(): string {
               </div>`,
               )
               .join('')}
-          </dl>
+            </dl>
+          </div>
         </div>
       </div>
     </section>

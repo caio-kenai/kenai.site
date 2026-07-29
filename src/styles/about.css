@@ -49,6 +49,68 @@
   gap: 0.5rem;
 }
 
+/* -- coluna lateral: retrato + metricas -- */
+.about__aside {
+  display: grid;
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+/* A arte foi feita sobre fundo preto e as roupas sao pretas tambem, entao o
+   fundo nao pode ser recortado — vira moldura, com um brilho do acento atras. */
+/* A arte tem fundo transparente, entao a figura fica solta sobre a secao —
+   sem moldura. A altura e fixa para reservar o espaco antes do carregamento,
+   evitando que o conteudo pule e atrapalhe a chegada por link com ancora. */
+.about__portrait {
+  position: relative;
+  height: clamp(20rem, 46vw, 34rem);
+  isolation: isolate;
+}
+
+/* Halo atras da figura: as roupas sao pretas e sem isso a silhueta se
+   perderia no fundo grafite do tema escuro. */
+.about__portrait::before {
+  content: '';
+  position: absolute;
+  inset: 6% 0 4%;
+  z-index: -1;
+  background: radial-gradient(
+    58% 52% at 50% 52%,
+    rgba(var(--accent-rgb), 0.2),
+    transparent 72%
+  );
+  filter: blur(8px);
+  pointer-events: none;
+}
+
+/* sombra elipsoidal que apoia a figura no chao */
+.about__portrait::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 1.5%;
+  translate: -50% 0;
+  width: 58%;
+  height: 16px;
+  z-index: -1;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(var(--accent-rgb), 0.42), transparent 70%);
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+/* As duas dimensoes precisam ser explicitas para o object-fit reduzir a arte:
+   com width/height automaticos e apenas max-*, a proporcao levava a altura
+   para 1104px dentro de um painel de 544px e a figura cobria as metricas. */
+.about__portrait img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
 /* -- metricas -- */
 .about__stats {
   display: grid;

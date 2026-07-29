@@ -48,9 +48,8 @@ const pt = {
   'stack.label': 'Stack',
   'stack.title': 'As ferramentas que eu realmente uso',
   'stack.desc':
-    'Sem barra de porcentagem e sem nota de autoavaliação — esse número não significa nada. Aqui está o que já apliquei em projeto e o que estou estudando neste momento.',
-  'stack.legend.using': 'Em uso',
-  'stack.legend.learning': 'Estudando',
+    'Sem barra de porcentagem e sem nota de autoavaliação — esse número não significa nada. Aqui está o que eu realmente uso para construir e sustentar software.',
+  'stack.alongside': 'Também no dia a dia',
   'stack.foundations': 'Base teórica',
 
   /* -- homelab -- */
@@ -170,9 +169,8 @@ const en: Record<keyof typeof pt, string> = {
   'stack.label': 'Stack',
   'stack.title': 'The tools I actually use',
   'stack.desc':
-    'No percentage bars and no self-assessed scores — that number means nothing. Here is what I have already used in a project and what I am studying right now.',
-  'stack.legend.using': 'In use',
-  'stack.legend.learning': 'Learning',
+    'No percentage bars and no self-assessed scores — that number means nothing. Here is what I actually use to build and run software.',
+  'stack.alongside': 'Also part of the day',
   'stack.foundations': 'Foundations',
 
   /* -- homelab -- */

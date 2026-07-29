@@ -7,24 +7,28 @@ import type { HomelabEntry } from './types';
 export const selfHosted: HomelabEntry[] = [
   {
     name: 'Nextcloud',
+    slug: 'nextcloud',
     role: { pt: 'Arquivos, agenda e contatos', en: 'Files, calendar and contacts' },
     domain: { pt: 'Nuvem pessoal', en: 'Personal cloud' },
     url: 'https://nextcloud.com',
   },
   {
     name: 'Immich',
+    slug: 'immich',
     role: { pt: 'Backup e galeria de fotos e vídeos', en: 'Photo and video backup and gallery' },
     domain: { pt: 'Mídia', en: 'Media' },
     url: 'https://immich.app',
   },
   {
     name: 'Bitwarden',
+    slug: 'bitwarden',
     role: { pt: 'Cofre de senhas e segredos', en: 'Password and secrets vault' },
     domain: { pt: 'Segurança', en: 'Security' },
     url: 'https://bitwarden.com',
   },
   {
     name: 'Syncthing',
+    slug: 'syncthing',
     role: {
       pt: 'Sincronização contínua de arquivos entre dispositivos',
       en: 'Continuous file sync across devices',
@@ -52,12 +56,14 @@ export const selfHosted: HomelabEntry[] = [
   },
   {
     name: 'RustDesk',
+    slug: 'rustdesk',
     role: { pt: 'Acesso remoto com servidor próprio', en: 'Remote access with self-run server' },
     domain: { pt: 'Acesso remoto', en: 'Remote access' },
     url: 'https://rustdesk.com',
   },
   {
     name: 'OnlyOffice',
+    slug: 'onlyoffice',
     role: { pt: 'Suíte de documentos colaborativa', en: 'Collaborative document suite' },
     domain: { pt: 'Produtividade', en: 'Productivity' },
     url: 'https://www.onlyoffice.com',
@@ -71,12 +77,14 @@ export const selfHosted: HomelabEntry[] = [
 export const dailyDrivers: HomelabEntry[] = [
   {
     name: 'Firefox',
+    slug: 'firefox',
     role: { pt: 'Navegador principal', en: 'Main browser' },
     domain: { pt: 'Navegador', en: 'Browser' },
     url: 'https://www.mozilla.org/firefox',
   },
   {
     name: 'Thunderbird',
+    slug: 'thunderbird',
     role: { pt: 'Cliente de e-mail e calendário', en: 'Email and calendar client' },
     domain: { pt: 'E-mail', en: 'Email' },
     url: 'https://www.thunderbird.net',
