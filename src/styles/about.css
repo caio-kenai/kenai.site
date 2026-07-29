@@ -1,0 +1,102 @@
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: start;
+}
+
+.about__text {
+  display: grid;
+  gap: 1.25rem;
+  color: var(--muted);
+  max-width: 62ch;
+}
+
+.about__text p {
+  font-size: var(--step-1);
+  line-height: 1.85;
+}
+
+/* primeira letra do bloco, como abertura editorial.
+   O seletor filho evita que a capitular caia em outros paragrafos aninhados. */
+.about__text > p:first-child::first-letter {
+  font-family: var(--font-display);
+  font-size: 2.4em;
+  font-weight: 700;
+  line-height: 0.85;
+  float: left;
+  margin: 0.08em 0.14em 0 0;
+  color: var(--accent);
+}
+
+.about__interests {
+  margin-top: 1rem;
+  padding-top: 1.5rem;
+  border-top: var(--border) solid var(--line);
+}
+
+.about__interests-label {
+  font-size: var(--step--1);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-bottom: 0.9rem;
+}
+
+.about__interests-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* -- metricas -- */
+.about__stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--border);
+  background: var(--line);
+  border: var(--border) solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.about__stat {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.35rem;
+  padding: clamp(1.1rem, 2vw, 1.6rem);
+  background: var(--bg);
+  transition: background-color var(--dur-fast) var(--ease-out);
+}
+
+.about__stat:hover {
+  background: var(--surface-2);
+}
+
+.about__stat-value {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 1.2rem + 2vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.about__stat-label {
+  font-size: var(--step--1);
+  line-height: 1.5;
+  color: var(--faint);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 900px) {
+  .about {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .about__stats {
+    grid-template-columns: 1fr;
+  }
+}

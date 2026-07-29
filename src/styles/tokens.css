@@ -1,0 +1,144 @@
+/* ==========================================================================
+   FONTES (self-hosted — o site nao faz nenhuma requisicao a terceiros)
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Chakra Petch';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/chakra-petch-600-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+2000-206F, U+2074, U+20AC, U+2122,
+    U+2191, U+2193, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Chakra Petch';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/chakra-petch-600-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+1E00-1EFF, U+2020, U+20A0-20AB, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Chakra Petch';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/chakra-petch-700-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+2000-206F, U+2074, U+20AC, U+2122,
+    U+2191, U+2193, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Chakra Petch';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/chakra-petch-700-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+1E00-1EFF, U+2020, U+20A0-20AB, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* JetBrains Mono e variavel: um arquivo cobre toda a faixa de peso. */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 100 800;
+  font-display: swap;
+  src: url('/fonts/jetbrains-mono-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+2000-206F, U+2074, U+20AC, U+2122,
+    U+2191, U+2193, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 100 800;
+  font-display: swap;
+  src: url('/fonts/jetbrains-mono-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+1E00-1EFF, U+2020, U+20A0-20AB, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* ==========================================================================
+   TOKENS
+   ========================================================================== */
+
+:root {
+  /* -- tipografia -- */
+  --font-display: 'Chakra Petch', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', 'Consolas', monospace;
+
+  --step--1: clamp(0.72rem, 0.7rem + 0.1vw, 0.78rem);
+  --step-0: clamp(0.875rem, 0.85rem + 0.15vw, 0.95rem);
+  --step-1: clamp(1rem, 0.95rem + 0.25vw, 1.15rem);
+  --step-2: clamp(1.3rem, 1.15rem + 0.7vw, 1.75rem);
+  --step-3: clamp(1.9rem, 1.4rem + 2.4vw, 3.4rem);
+  --step-4: clamp(2.4rem, 1.5rem + 4.2vw, 5rem);
+
+  /* -- espacamento -- */
+  --gutter: clamp(1.25rem, 0.6rem + 2.6vw, 2.75rem);
+  --section-y: clamp(4.5rem, 3rem + 6vw, 7.5rem);
+  --maxw: 1180px;
+
+  /* -- movimento -- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 0.16s;
+  --dur: 0.28s;
+  --dur-slow: 0.6s;
+
+  --radius: 4px;
+  --border: 1px;
+}
+
+/* -- tema escuro (padrao) -- */
+:root,
+[data-theme='dark'] {
+  --bg: #0b0d0e;
+  --bg-rgb: 11, 13, 14;
+  --surface: #111617;
+  --surface-2: #171d1e;
+  --text: #e8ecec;
+  --text-rgb: 232, 236, 236;
+  --muted: rgba(232, 236, 236, 0.6);
+  --faint: rgba(232, 236, 236, 0.38);
+  --line: rgba(232, 236, 236, 0.11);
+  --line-strong: rgba(232, 236, 236, 0.22);
+
+  --accent: #22d3c5;
+  --accent-rgb: 34, 211, 197;
+  --accent-soft: rgba(34, 211, 197, 0.13);
+  --on-accent: #032523;
+
+  --signal: #ff6b5f;
+  --signal-rgb: 255, 107, 95;
+
+  --shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  --grid-line: rgba(232, 236, 236, 0.045);
+}
+
+/* -- tema claro -- */
+[data-theme='light'] {
+  --bg: #f3f5f4;
+  --bg-rgb: 243, 245, 244;
+  --surface: #ffffff;
+  --surface-2: #eaeeed;
+  --text: #0c1211;
+  --text-rgb: 12, 18, 17;
+  --muted: rgba(12, 18, 17, 0.66);
+  --faint: rgba(12, 18, 17, 0.45);
+  --line: rgba(12, 18, 17, 0.14);
+  --line-strong: rgba(12, 18, 17, 0.26);
+
+  /* teal mais escuro: garante contraste AA sobre fundo claro */
+  --accent: #0a7d74;
+  --accent-rgb: 10, 125, 116;
+  --accent-soft: rgba(10, 125, 116, 0.1);
+  --on-accent: #ffffff;
+
+  --signal: #c8382c;
+  --signal-rgb: 200, 56, 44;
+
+  --shadow: 0 18px 40px rgba(12, 18, 17, 0.14);
+  --grid-line: rgba(12, 18, 17, 0.05);
+}

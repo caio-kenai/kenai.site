@@ -1,0 +1,121 @@
+.stack__legend {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.stack__legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.stack__marker {
+  width: 7px;
+  height: 7px;
+  flex: none;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+.stack__legend-item--learning .stack__marker,
+.stack__item--learning .stack__marker {
+  background: transparent;
+  border: 1.5px solid var(--faint);
+}
+
+/* A contagem de colunas e fixa por faixa para que os 6 grupos sempre
+   preencham a grade por inteiro — com auto-fit sobrariam celulas vazias,
+   que apareceriam como blocos da cor das linhas. */
+.stack__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--border);
+  background: var(--line);
+  border: var(--border) solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.stack__group {
+  background: var(--bg);
+  padding: clamp(1.25rem, 2.4vw, 1.9rem);
+  transition: background-color var(--dur-fast) var(--ease-out);
+}
+
+.stack__group:hover {
+  background: var(--surface);
+}
+
+.stack__group-title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  font-size: var(--step-1);
+  margin-bottom: 1.1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: var(--border) solid var(--line);
+}
+
+.stack__group-index {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.stack__items {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.stack__item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: var(--step-0);
+  color: var(--muted);
+  transition: color var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+}
+
+.stack__item:hover {
+  color: var(--text);
+  transform: translateX(3px);
+}
+
+.stack__item--learning .stack__name {
+  color: var(--faint);
+  font-style: italic;
+}
+
+/* -- base teorica -- */
+.stack__foundations {
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  padding-top: clamp(1.75rem, 3vw, 2.25rem);
+  border-top: var(--border) solid var(--line);
+}
+
+.stack__foundations-title {
+  font-size: var(--step--1);
+  letter-spacing: 0.18em;
+  color: var(--faint);
+  margin-bottom: 1rem;
+}
+
+.stack__foundations-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .stack__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .stack__grid {
+    grid-template-columns: 1fr;
+  }
+}

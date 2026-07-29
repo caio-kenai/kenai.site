@@ -1,0 +1,219 @@
+.nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 100;
+  background: rgba(var(--bg-rgb), 0.72);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border-bottom: var(--border) solid transparent;
+  transition: border-color var(--dur) var(--ease-out), background-color var(--dur) var(--ease-out);
+}
+
+.nav.is-scrolled {
+  border-bottom-color: var(--line);
+}
+
+.nav__inner {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+/* -- marca -- */
+.nav__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+  margin-right: auto;
+  flex: none;
+}
+
+.nav__brand-glyph {
+  display: grid;
+  place-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  font-size: 1rem;
+  color: var(--accent);
+  border: var(--border) solid var(--line-strong);
+  border-radius: var(--radius);
+  transition: border-color var(--dur-fast) var(--ease-out),
+    background-color var(--dur-fast) var(--ease-out);
+}
+
+.nav__brand:hover .nav__brand-glyph {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.nav__brand-tld {
+  color: var(--accent);
+}
+
+/* -- links -- */
+.nav__links ul {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.nav__link {
+  position: relative;
+  display: block;
+  padding: 0.4rem 0.7rem;
+  font-size: var(--step--1);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--muted);
+  border-radius: var(--radius);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  left: 0.7rem;
+  right: 0.7rem;
+  bottom: 0.15rem;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur) var(--ease-out);
+}
+
+.nav__link:hover {
+  color: var(--text);
+}
+
+.nav__link:hover::after,
+.nav__link[aria-current]::after {
+  transform: scaleX(1);
+}
+
+.nav__link[aria-current] {
+  color: var(--accent);
+}
+
+/* -- controles -- */
+.nav__controls {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex: none;
+}
+
+.nav__icon-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  height: 2.25rem;
+  padding-inline: 0.6rem;
+  font-size: 1rem;
+  color: var(--muted);
+  border: var(--border) solid transparent;
+  border-radius: var(--radius);
+  transition: color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out), background-color var(--dur-fast) var(--ease-out);
+}
+
+.nav__icon-btn:hover {
+  color: var(--accent);
+  border-color: var(--line-strong);
+  background: var(--surface-2);
+}
+
+.nav__kbd,
+.nav__lang-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--faint);
+}
+
+.nav__kbd {
+  border: var(--border) solid var(--line);
+  border-radius: 3px;
+  padding: 0.1rem 0.3rem;
+  font-family: var(--font-mono);
+}
+
+.nav__icon-btn:hover .nav__kbd,
+.nav__icon-btn:hover .nav__lang-label {
+  color: inherit;
+}
+
+.nav__burger {
+  display: none;
+}
+
+/* -- painel mobile -- */
+.nav__panel {
+  display: none;
+  border-top: var(--border) solid var(--line);
+  padding: 1rem var(--gutter) 1.75rem;
+  background: var(--bg);
+}
+
+.nav__panel ul {
+  display: grid;
+  gap: 0.15rem;
+  margin-bottom: 1rem;
+}
+
+.nav__panel-link {
+  display: block;
+  padding: 0.8rem 0.25rem;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: var(--border) solid var(--line);
+}
+
+.nav__panel-link:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 879px) {
+  .nav__links,
+  .nav__controls--bar {
+    display: none;
+  }
+
+  .nav__burger {
+    display: inline-flex;
+  }
+
+  .nav.is-open .nav__panel {
+    display: block;
+    max-height: calc(100dvh - 4rem);
+    overflow-y: auto;
+  }
+
+  .nav__controls--panel {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .nav__controls--panel .nav__icon-btn {
+    border-color: var(--line);
+  }
+}
+
+@media (min-width: 880px) {
+  .nav__panel {
+    display: none !important;
+  }
+}

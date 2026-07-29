@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#0b0d0e" />
+
+    <title>kenai.dev — Caio Oliveira Pacifico</title>
+    <meta
+      name="description"
+      content="Caio Oliveira Pacifico — desenvolvimento full stack, infraestrutura e software livre. Portfolio, stack e homelab self-hosted."
+    />
+    <meta name="author" content="Caio Oliveira Pacifico" />
+    <link rel="canonical" href="https://kenai.site/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="kenai.dev" />
+    <meta property="og:title" content="kenai.dev — Caio Oliveira Pacifico" />
+    <meta
+      property="og:description"
+      content="Desenvolvimento full stack, infraestrutura e software livre. Stack, homelab self-hosted e projetos."
+    />
+    <meta property="og:url" content="https://kenai.site/" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="mask-icon" href="/favicon.svg" color="#22d3c5" />
+
+    <link rel="preload" href="/fonts/chakra-petch-700-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin />
+
+    <script>
+      // Aplica tema e idioma antes da primeira pintura para evitar flash.
+      (function () {
+        try {
+          var t = localStorage.getItem('kenai:theme');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+
+          var l = localStorage.getItem('kenai:lang');
+          if (l !== 'pt' && l !== 'en') {
+            l = (navigator.language || 'pt').toLowerCase().startsWith('pt') ? 'pt' : 'en';
+          }
+          document.documentElement.setAttribute('lang', l === 'pt' ? 'pt-BR' : 'en');
+        } catch (e) {
+          /* armazenamento indisponivel: mantem os padroes do HTML */
+        }
+      })();
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Caio Oliveira Pacifico",
+        "alternateName": "kenai.dev",
+        "url": "https://kenai.site/",
+        "jobTitle": "Técnico de Suporte Júnior",
+        "worksFor": { "@type": "Organization", "name": "Playlist Software Solutions" },
+        "knowsLanguage": ["pt-BR", "en"],
+        "sameAs": [
+          "https://github.com/caio-kenai",
+          "https://www.linkedin.com/in/caio-oliveira-pacifico-a6042b246"
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="scroll-progress" id="scrollProgress" role="presentation"></div>
+    <a class="skip-link" href="#main">Pular para o conteúdo principal</a>
+
+    <div id="app"></div>
+
+    <noscript>
+      <div class="noscript-fallback">
+        <h1>kenai.dev — Caio Oliveira Pacifico</h1>
+        <p>
+          Técnico de Suporte Júnior na Playlist Software Solutions, estudando desenvolvimento full
+          stack, agentes de IA e infraestrutura. Entusiasta de privacidade e software livre, com um
+          homelab self-hosted em uso diário.
+        </p>
+        <p>
+          <a href="https://github.com/caio-kenai">GitHub</a> ·
+          <a href="https://www.linkedin.com/in/caio-oliveira-pacifico-a6042b246">LinkedIn</a>
+        </p>
+        <p>Este site usa JavaScript para renderizar o conteúdo completo.</p>
+      </div>
+    </noscript>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

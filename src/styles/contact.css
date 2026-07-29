@@ -1,0 +1,108 @@
+.contact__list {
+  display: grid;
+  gap: var(--border);
+  background: var(--line);
+  border: var(--border) solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.contact__item {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  background: var(--bg);
+}
+
+.contact__card {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 2.75rem minmax(0, 10rem) minmax(0, 1fr);
+  align-items: center;
+  gap: 1rem;
+  padding: clamp(1.15rem, 2.4vw, 1.6rem) clamp(1.15rem, 2.4vw, 1.75rem);
+  text-decoration: none;
+  transition: background-color var(--dur-fast) var(--ease-out);
+}
+
+.contact__card:hover {
+  background: var(--surface-2);
+}
+
+.contact__icon {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: var(--border) solid var(--line-strong);
+  border-radius: var(--radius);
+  font-size: 1.05rem;
+  color: var(--accent);
+  transition: border-color var(--dur-fast) var(--ease-out),
+    background-color var(--dur-fast) var(--ease-out);
+}
+
+.contact__card:hover .contact__icon {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.contact__label {
+  font-family: var(--font-display);
+  font-size: var(--step-1);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.contact__value {
+  font-size: var(--step--1);
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+.contact__copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding-inline: clamp(1rem, 2.4vw, 1.5rem);
+  border-left: var(--border) solid var(--line);
+  font-size: var(--step--1);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+  transition: color var(--dur-fast) var(--ease-out),
+    background-color var(--dur-fast) var(--ease-out);
+}
+
+.contact__copy:hover {
+  color: var(--accent);
+  background: var(--surface-2);
+}
+
+.contact__copy.is-copied {
+  color: var(--accent);
+}
+
+@media (max-width: 720px) {
+  .contact__card {
+    grid-template-columns: 2.75rem minmax(0, 1fr);
+    row-gap: 0.35rem;
+  }
+
+  .contact__label {
+    grid-column: 2;
+  }
+
+  .contact__value {
+    grid-column: 2;
+  }
+
+  .contact__copy {
+    padding-inline: 1rem;
+  }
+
+  .contact__copy .js-copy-label {
+    display: none;
+  }
+}
