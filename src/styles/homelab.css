@@ -1,0 +1,149 @@
+.lab__block + .lab__block {
+  margin-top: clamp(2.5rem, 5vw, 3.75rem);
+}
+
+.lab__block-title {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: var(--step--1);
+  letter-spacing: 0.18em;
+  color: var(--faint);
+  margin-bottom: 1.25rem;
+}
+
+.lab__block-icon {
+  display: grid;
+  place-items: center;
+  font-size: 1.05rem;
+  color: var(--accent);
+}
+
+/* Colunas fixas por faixa: os 8 servicos preenchem 4x2 e os 3 programas
+   preenchem uma linha, sem deixar celulas vazias na grade. */
+.lab__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--border);
+  background: var(--line);
+  border: var(--border) solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.lab__card {
+  background: var(--bg);
+}
+
+.lab__link {
+  position: relative;
+  display: grid;
+  gap: 0.35rem;
+  height: 100%;
+  padding: clamp(1.15rem, 2.2vw, 1.6rem);
+  text-decoration: none;
+  transition: background-color var(--dur-fast) var(--ease-out);
+}
+
+.lab__link::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  background: var(--accent);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform var(--dur) var(--ease-out);
+}
+
+.lab__link:hover {
+  background: var(--surface-2);
+}
+
+.lab__link:hover::before,
+.lab__link:focus-visible::before {
+  transform: scaleY(1);
+}
+
+.lab__logo {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.lab__domain {
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.lab__name {
+  font-size: var(--step-1);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.lab__role {
+  font-size: var(--step--1);
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.lab__external {
+  position: absolute;
+  top: clamp(1.15rem, 2.2vw, 1.6rem);
+  right: clamp(1.15rem, 2.2vw, 1.6rem);
+  font-size: 0.85rem;
+  color: var(--faint);
+  opacity: 0;
+  transform: translate(-3px, 3px);
+  transition: opacity var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+}
+
+.lab__link:hover .lab__external,
+.lab__link:focus-visible .lab__external {
+  opacity: 1;
+  transform: none;
+  color: var(--accent);
+}
+
+/* -- nota final -- */
+.lab__note {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  padding: 1.15rem 1.3rem;
+  border: var(--border) solid rgba(var(--accent-rgb), 0.3);
+  border-left-width: 2px;
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+  font-size: var(--step--1);
+  line-height: 1.75;
+  color: var(--muted);
+  max-width: 72ch;
+}
+
+.lab__note-mark {
+  color: var(--accent);
+  font-weight: 700;
+  flex: none;
+}
+
+.lab__grid--compact {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .lab__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .lab__grid,
+  .lab__grid--compact {
+    grid-template-columns: 1fr;
+  }
+}
