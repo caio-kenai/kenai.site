@@ -1,0 +1,64 @@
+kenai.dev — portfolio pessoal de Caio Oliveira Pacifico
+Copyright (C) 2026 Caio Oliveira Pacifico
+
+Este programa e software livre: voce pode redistribui-lo e/ou modifica-lo sob
+os termos da GNU Affero General Public License, conforme publicada pela Free
+Software Foundation, na versao 3 da licenca.
+
+Este programa e distribuido na esperanca de que seja util, mas SEM NENHUMA
+GARANTIA; sem mesmo a garantia implicita de COMERCIABILIDADE ou ADEQUACAO A
+UM PROPOSITO ESPECIFICO. Veja a GNU Affero General Public License para mais
+detalhes.
+
+Voce deve ter recebido uma copia da GNU Affero General Public License junto
+com este programa. Se nao, veja <https://www.gnu.org/licenses/>.
+
+
+================================================================================
+O QUE A AGPL COBRE AQUI
+================================================================================
+
+A licenca se aplica ao CODIGO deste repositorio: os arquivos em src/, a
+configuracao de build, o HTML e as folhas de estilo. Fique a vontade para ler,
+estudar, adaptar e usar como base do seu proprio portfolio.
+
+O que a AGPL exige de quem reutiliza: se voce modificar este codigo e
+disponibilizar o resultado em um servidor acessivel ao publico, precisa
+oferecer o codigo-fonte da sua versao aos usuarios desse servidor.
+
+
+================================================================================
+O QUE NAO ESTA LICENCIADO
+================================================================================
+
+Os itens abaixo sao conteudo pessoal, nao codigo, e NAO estao cobertos pela
+AGPL nem por qualquer outra licenca de uso. Todos os direitos reservados:
+
+  - A ilustracao em art/ e public/img/ — retrato do autor, encomendado por
+    ele. Nao reutilize, redistribua nem crie derivados dessa imagem.
+
+  - O texto biografico, a trajetoria profissional, a descricao das
+    experiencias e a lista de formacao presentes em src/data/ — sao dados
+    pessoais do autor.
+
+  - O nome "Caio Oliveira Pacifico", a marca "kenai.dev" e o dominio
+    kenai.site.
+
+Se voce for usar este projeto como base, troque esses itens pelos seus. E
+justamente o que os arquivos em src/data/ facilitam.
+
+
+================================================================================
+TERCEIROS
+================================================================================
+
+  - Fontes: JetBrains Mono e Chakra Petch, ambas sob SIL Open Font License 1.1.
+    Arquivos em public/fonts/.
+
+  - Logos de tecnologias em public/icons/tech/: projeto Devicon, licenca MIT.
+
+  - Logos em public/icons/lab/: projeto Simple Icons, licenca CC0 1.0.
+
+  - As marcas e logotipos representados por esses icones pertencem aos seus
+    respectivos detentores e aparecem aqui apenas para identificar as
+    tecnologias e os projetos citados.

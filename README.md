@@ -85,5 +85,11 @@ O resultado do build e estatico, entao serve em qualquer hospedagem de arquivos.
 
 ## Licenca
 
-[MIT](LICENSE) — sinta-se livre para ler o codigo, aprender com ele e se inspirar. Se algo aqui te
-for util, use.
+O codigo esta sob a [GNU Affero General Public License v3](LICENSE). Leia, estude, adapte e use
+como base do seu proprio portfolio — a unica exigencia e que, se voce modificar e hospedar o
+resultado publicamente, o codigo-fonte da sua versao fique disponivel para quem usa aquele
+servidor. E a mesma licenca do Nextcloud e do Immich, dois dos servicos que rodam no meu homelab.
+
+A ilustracao, o texto biografico e a marca **nao** estao cobertos pela licenca. O [NOTICE](NOTICE)
+detalha o que e codigo livre e o que e conteudo pessoal reservado, alem dos creditos de fontes e
+icones de terceiros.

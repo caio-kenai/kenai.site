@@ -79,6 +79,19 @@
   opacity: 0.5;
 }
 
+.footer__license {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--line-strong);
+  transition: color var(--dur-fast) var(--ease-out),
+    text-decoration-color var(--dur-fast) var(--ease-out);
+}
+
+.footer__license:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
 @media (max-width: 720px) {
   .footer__inner {
     grid-template-columns: 1fr;

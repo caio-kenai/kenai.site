@@ -100,7 +100,7 @@ const pt = {
   /* -- rodape -- */
   'footer.built': 'Escrito, versionado e hospedado por mim.',
   'footer.source': 'Código-fonte',
-  'footer.license': 'Aberto sob licença MIT',
+  'footer.license': 'Código sob AGPL-3.0',
   'footer.privacy': 'Sem cookies, sem rastreadores, sem requisições a terceiros.',
 
   /* -- paleta de comandos -- */
@@ -221,7 +221,7 @@ const en: Record<keyof typeof pt, string> = {
   /* -- footer -- */
   'footer.built': 'Written, versioned and hosted by me.',
   'footer.source': 'Source code',
-  'footer.license': 'Open under the MIT license',
+  'footer.license': 'Code under AGPL-3.0',
   'footer.privacy': 'No cookies, no trackers, no third-party requests.',
 
   /* -- command palette -- */
