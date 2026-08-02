@@ -46,8 +46,6 @@ const pt = {
   'about.stats.stack': 'Tecnologias na stack',
   'about.stats.langs': 'Idiomas fluentes',
   'about.interests': 'Fora do código',
-  'about.party': 'Party',
-  'about.party.note': 'Quem me acompanha desde o Nintendo 64.',
 
   /* -- stack -- */
   'stack.label': 'Stack',
@@ -172,8 +170,6 @@ const en: Record<keyof typeof pt, string> = {
   'about.stats.stack': 'Technologies in the stack',
   'about.stats.langs': 'Fluent languages',
   'about.interests': 'Outside the code',
-  'about.party': 'Party',
-  'about.party.note': 'The ones who have been with me since the Nintendo 64.',
 
   /* -- stack -- */
   'stack.label': 'Stack',

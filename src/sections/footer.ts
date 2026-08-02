@@ -27,6 +27,16 @@ export function renderFooter(): string {
             </a>
           </li>
           <li>
+            <a href="${profile.links.mastodon}" target="_blank" rel="me noopener noreferrer">
+              <span aria-hidden="true">${icons.mastodon}</span> Mastodon
+            </a>
+          </li>
+          <li>
+            <a href="${profile.links.bluesky}" target="_blank" rel="me noopener noreferrer">
+              <span aria-hidden="true">${icons.bluesky}</span> Bluesky
+            </a>
+          </li>
+          <li>
             <a href="${profile.links.repo}" target="_blank" rel="noopener noreferrer">
               <span aria-hidden="true">${icons.terminal}</span>
               <span ${tx('footer.source')}>${t('footer.source')}</span>

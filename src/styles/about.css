@@ -56,138 +56,11 @@
   top: 5.5rem;
 }
 
-/* ==========================================================================
-   PARTY (ficha de personagens, no espirito de um menu de RPG)
-   ========================================================================== */
-
-.party {
-  border: 2px solid var(--line-strong);
-  background: var(--bg);
-  /* cantos recortados, no lugar de borda arredondada: leitura de pixel art */
-  clip-path: polygon(
-    0 6px,
-    6px 6px,
-    6px 0,
-    calc(100% - 6px) 0,
-    calc(100% - 6px) 6px,
-    100% 6px,
-    100% calc(100% - 6px),
-    calc(100% - 6px) calc(100% - 6px),
-    calc(100% - 6px) 100%,
-    6px 100%,
-    6px calc(100% - 6px),
-    0 calc(100% - 6px)
-  );
-}
-
-.party__head {
+/* companheiro solto na coluna lateral, sem moldura */
+.about__companion {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.7rem 1rem;
-  border-bottom: 2px solid var(--line-strong);
-  background: var(--surface-2);
-  font-size: var(--step--1);
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-}
-
-.party__title {
-  color: var(--accent);
-  font-weight: 700;
-}
-
-.party__count {
-  color: var(--faint);
-  letter-spacing: 0.1em;
-}
-
-.party__slots {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 2px;
-  background: var(--line);
-}
-
-.party__slot {
-  display: grid;
-  justify-items: center;
-  gap: 0.15rem;
-  padding: 1rem 0.5rem 0.9rem;
-  background: var(--bg);
-  transition: background-color var(--dur-fast) var(--ease-out);
-}
-
-.party__slot:hover {
-  background: var(--surface-2);
-}
-
-/* plataforma sob o sprite, como um pedestal de tela de selecao */
-.party__stage {
-  position: relative;
-  display: grid;
-  place-items: end center;
-  height: 8.5rem;
-  width: 100%;
-  margin-bottom: 0.5rem;
-}
-
-.party__stage::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  translate: -50% 0;
-  width: 3.5rem;
-  height: 6px;
-  background: rgba(var(--accent-rgb), 0.35);
-  box-shadow: 0 0 12px rgba(var(--accent-rgb), 0.45);
-}
-
-.party__sprite {
-  position: relative;
-  z-index: 1;
-  width: auto;
-  height: 100%;
-  max-width: 100%;
-  object-fit: contain;
-  /* mantem as bordas duras do pixel art em qualquer escala */
-  image-rendering: pixelated;
-  transition: transform var(--dur) var(--ease-out);
-}
-
-.party__slot:hover .party__sprite {
-  transform: translateY(-6px);
-}
-
-.party__name {
-  font-family: var(--font-display);
-  font-size: var(--step-0);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.party__role {
-  font-size: 0.66rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-
-.party__from {
-  font-size: 0.66rem;
-  color: var(--faint);
-  text-align: center;
-}
-
-.party__note {
-  padding: 0.7rem 1rem;
-  border-top: 2px solid var(--line-strong);
-  font-size: var(--step--1);
-  color: var(--faint);
-  line-height: 1.6;
+  justify-content: center;
+  padding-block: 0.5rem 1.25rem;
 }
 
 /* ==========================================================================
@@ -242,16 +115,8 @@
     position: static;
   }
 
-  .party__slots {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
 }
 
-@media (max-width: 620px) {
-  .party__slots {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
 
 @media (max-width: 420px) {
   .about__stats {
@@ -259,8 +124,3 @@
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .party__slot:hover .party__sprite {
-    transform: none;
-  }
-}

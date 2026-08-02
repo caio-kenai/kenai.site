@@ -1,8 +1,9 @@
 import { interests } from '../data/i18n';
 import { selfHostedCount } from '../data/homelab';
-import { party } from '../data/sprites';
+import { sprites } from '../data/sprites';
 import { stackCount } from '../data/stack';
-import { esc, loc, lt, t, tx } from '../lib/dom';
+import { esc, t, tx } from '../lib/dom';
+import { sprite } from '../lib/sprite';
 import { getLang, onLangChange } from '../lib/state';
 import type { StringKey } from '../data/i18n';
 
@@ -16,42 +17,6 @@ const stats: { value: string; key: StringKey }[] = [
 
 function renderInterests(): string {
   return interests[getLang()].map((item) => `<li class="chip">${esc(item)}</li>`).join('');
-}
-
-/** Ficha de personagem para cada sprite, no formato de uma party de RPG. */
-function renderParty(): string {
-  const cards = party
-    .map(
-      (member, index) => `
-        <li class="party__slot" style="--slot-index: ${index}">
-          <div class="party__stage">
-            <img
-              class="party__sprite"
-              src="/sprites/${member.file}"
-              width="${member.width}"
-              height="${member.height}"
-              alt="${esc(member.name)}"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <p class="party__name">${esc(member.name)}</p>
-          <p class="party__role" ${loc(member.role)}>${lt(member.role)}</p>
-          <p class="party__from">${esc(member.from)}</p>
-        </li>`,
-    )
-    .join('');
-
-  return `
-    <figure class="party reveal">
-      <figcaption class="party__head">
-        <span class="party__title" ${tx('about.party')}>${t('about.party')}</span>
-        <span class="party__count">${party.length}/4</span>
-      </figcaption>
-      <ul class="party__slots">${cards}</ul>
-      <p class="party__note" ${tx('about.party.note')}>${t('about.party.note')}</p>
-    </figure>
-  `;
 }
 
 export function renderAbout(): string {
@@ -78,7 +43,9 @@ export function renderAbout(): string {
           </div>
 
           <div class="about__aside">
-            ${renderParty()}
+            <div class="about__companion reveal">
+              ${sprite(sprites.absol, { height: '9rem' })}
+            </div>
 
             <dl class="about__stats reveal">
               ${stats

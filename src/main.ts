@@ -9,6 +9,7 @@ import './styles/projects.css';
 import './styles/journey.css';
 import './styles/contact.css';
 import './styles/footer.css';
+import './styles/sprite.css';
 import './styles/palette.css';
 
 import { initTranslations, qs } from './lib/dom';

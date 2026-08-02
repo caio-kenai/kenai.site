@@ -1,7 +1,9 @@
 import { journey } from '../data/journey';
 import type { JourneyEntry } from '../data/types';
+import { sprites } from '../data/sprites';
 import { icons } from '../lib/icons';
 import { esc, loc, lt, t, tx } from '../lib/dom';
+import { sprite } from '../lib/sprite';
 
 function renderEntry(entry: JourneyEntry, index: number): string {
   const kindKey = entry.kind === 'work' ? ('journey.work' as const) : ('journey.education' as const);
@@ -60,6 +62,11 @@ export function renderJourney(): string {
         <p class="section-desc reveal" ${tx('journey.desc')}>${t('journey.desc')}</p>
 
         <ol class="jrn__list">${journey.map(renderEntry).join('')}</ol>
+
+        <!-- Link fecha a trilha, no ponto em que a linha do tempo termina. -->
+        <div class="jrn__walker reveal">
+          ${sprite(sprites.link, { height: '7.5rem' })}
+        </div>
       </div>
     </section>
   `;
