@@ -1,58 +1,49 @@
-import type { Localized } from './types';
-
 export interface Sprite {
-  id: string;
   /** Arquivo em public/sprites/ */
   file: string;
   name: string;
-  /** De onde o personagem veio. */
+  /** De onde o personagem veio, exibido ao passar o ponteiro. */
   from: string;
-  /** Classe, no espirito de uma ficha de RPG. */
-  role: Localized;
-  /** Altura do sprite em pixels, para reservar o espaco antes de carregar. */
+  /** Dimensoes reais, para reservar o espaco antes de carregar. */
   width: number;
   height: number;
 }
 
 /**
- * Os personagens que aparecem na secao "sobre". Nao sao ilustracao
- * decorativa: sao as referencias que o Caio cita no proprio texto.
+ * Os personagens que o Caio cita no proprio texto. Cada um aparece na secao
+ * com que tem alguma relacao, em vez de ficarem enfileirados num bloco so.
  */
-export const party: Sprite[] = [
-  {
-    id: 'link',
+export const sprites = {
+  /** Jornada: a secao e uma trilha, e ele caminha nela. */
+  link: {
     file: 'link.gif',
     name: 'Link',
     from: 'Ocarina of Time',
-    role: { pt: 'Herói', en: 'Hero' },
     width: 92,
     height: 150,
   },
-  {
-    id: 'zero',
+  /** Projetos: ainda em construcao. */
+  zero: {
     file: 'zero.gif',
     name: 'Zero',
     from: 'Mega Man X',
-    role: { pt: 'Espadachim', en: 'Swordsman' },
     width: 129,
     height: 150,
   },
-  {
-    id: 'gengar',
+  /** Homelab: um fantasma combina com a parte de nao deixar rastro. */
+  gengar: {
     file: 'gengar.gif',
     name: 'Gengar',
     from: 'Pokémon',
-    role: { pt: 'Fantasma', en: 'Ghost' },
     width: 152,
     height: 150,
   },
-  {
-    id: 'absol',
+  /** Sobre: companhia na secao mais pessoal do site. */
+  absol: {
     file: 'absol.gif',
     name: 'Absol',
     from: 'Pokémon',
-    role: { pt: 'Sombrio', en: 'Dark' },
     width: 152,
     height: 150,
   },
-];
+} as const satisfies Record<string, Sprite>;

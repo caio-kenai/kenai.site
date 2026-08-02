@@ -155,34 +155,6 @@
   background: var(--surface);
 }
 
-/* O sprite fica sobre o mesmo pedestal usado na party */
-.proj__empty-stage {
-  position: relative;
-  display: grid;
-  place-items: end center;
-  height: 7rem;
-}
-
-.proj__empty-stage::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  translate: -50% 0;
-  width: 4rem;
-  height: 6px;
-  background: rgba(var(--accent-rgb), 0.35);
-  box-shadow: 0 0 12px rgba(var(--accent-rgb), 0.45);
-}
-
-.proj__empty-sprite {
-  position: relative;
-  z-index: 1;
-  width: auto;
-  height: 100%;
-  image-rendering: pixelated;
-}
-
 .proj__empty-title {
   font-size: var(--step-2);
 }

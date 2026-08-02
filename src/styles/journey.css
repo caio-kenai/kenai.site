@@ -127,6 +127,13 @@
   padding: 0.18rem 0.45rem;
 }
 
+/* Link caminha no fim da trilha, alinhado com a linha vertical do tempo */
+.jrn__walker {
+  display: flex;
+  padding-left: 0.35rem;
+  margin-top: 1.25rem;
+}
+
 @media (max-width: 560px) {
   .jrn__entry {
     grid-template-columns: 1.9rem minmax(0, 1fr);

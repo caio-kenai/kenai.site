@@ -32,6 +32,11 @@ export const profile = {
   links: {
     github: 'https://github.com/caio-kenai',
     linkedin: 'https://www.linkedin.com/in/caio-oliveira-pacifico-a6042b246',
+    mastodon: 'https://mastodon.social/@caiokenai',
+    bluesky: 'https://bsky.app/profile/caiokenai.bsky.social',
     repo: 'https://github.com/caio-kenai/kenai.site',
   },
+
+  /** Identificador usado nas duas redes sociais. */
+  social: '@caiokenai',
 } as const;

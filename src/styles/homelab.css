@@ -122,11 +122,18 @@
   color: var(--accent);
 }
 
-/* -- nota final -- */
+/* -- fechamento: nota e o fantasma ao lado dela -- */
+.lab__closing {
+  display: flex;
+  align-items: flex-end;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  flex-wrap: wrap;
+}
+
 .lab__note {
   display: flex;
   gap: 0.6rem;
-  margin-top: clamp(2.5rem, 5vw, 3.5rem);
   padding: 1.15rem 1.3rem;
   border: var(--border) solid rgba(var(--accent-rgb), 0.3);
   border-left-width: 2px;

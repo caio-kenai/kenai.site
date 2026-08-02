@@ -1,8 +1,10 @@
 import { dailyDrivers, selfHosted } from '../data/homelab';
 import type { HomelabEntry } from '../data/types';
 import { icons } from '../lib/icons';
+import { sprites } from '../data/sprites';
 import { esc, loc, lt, t, tx } from '../lib/dom';
 import { logo } from '../lib/logo';
+import { sprite } from '../lib/sprite';
 
 function renderEntry(entry: HomelabEntry, index: number): string {
   return `
@@ -52,10 +54,13 @@ export function renderHomelab(): string {
           <ul class="lab__grid lab__grid--compact">${dailyDrivers.map(renderEntry).join('')}</ul>
         </div>
 
-        <p class="lab__note reveal">
-          <span class="lab__note-mark" aria-hidden="true">//</span>
-          <span ${tx('homelab.note')}>${t('homelab.note')}</span>
-        </p>
+        <div class="lab__closing reveal">
+          <p class="lab__note">
+            <span class="lab__note-mark" aria-hidden="true">//</span>
+            <span ${tx('homelab.note')}>${t('homelab.note')}</span>
+          </p>
+          ${sprite(sprites.gengar, { height: '7.5rem', flip: true })}
+        </div>
       </div>
     </section>
   `;
