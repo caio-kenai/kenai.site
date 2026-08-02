@@ -127,9 +127,13 @@
   padding: 0.18rem 0.45rem;
 }
 
-/* Link caminha no fim da trilha, alinhado com a linha vertical do tempo */
-.jrn__walker {
+/* Link e Zelda fecham a trilha, um em cada ponta da linha do tempo.
+   O recuo a esquerda alinha o Link com a coluna dos marcadores. */
+.jrn__walkers {
   display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
   padding-left: 0.35rem;
   margin-top: 1.25rem;
 }
