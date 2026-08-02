@@ -3,12 +3,14 @@
    Personagem apoiado num pedestal luminoso, usado solto dentro das secoes.
    ========================================================================== */
 
+/* A altura fica na imagem, não no contêiner: dentro de um grid a
+   porcentagem não resolve e o sprite vazava para fora da caixa. */
 .sprite {
   --sprite-h: 7rem;
   position: relative;
-  display: grid;
-  place-items: end center;
-  height: var(--sprite-h);
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: center;
   flex: none;
   pointer-events: none;
 }
@@ -30,10 +32,9 @@
 .sprite__img {
   position: relative;
   z-index: 1;
+  display: block;
   width: auto;
-  height: 100%;
-  max-width: 100%;
-  /* mantem a borda dura do pixel art em qualquer escala */
+  height: var(--sprite-h);
   image-rendering: pixelated;
   pointer-events: auto;
   animation: sprite-idle 3.6s ease-in-out infinite;
