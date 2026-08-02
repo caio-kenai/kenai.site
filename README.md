@@ -86,7 +86,7 @@ O resultado do build e estatico, entao serve em qualquer hospedagem de arquivos.
 ## Licenca
 
 O codigo esta sob a [GNU Affero General Public License v3](LICENSE). Leia, estude, adapte e use
-como base do seu proprio portfolio — a unica exigencia e que, se voce modificar e hospedar o
+como base do seu proprio portfolio. A unica exigencia e que, se voce modificar e hospedar o
 resultado publicamente, o codigo-fonte da sua versao fique disponivel para quem usa aquele
 servidor. E a mesma licenca do Nextcloud e do Immich, dois dos servicos que rodam no meu homelab.
 

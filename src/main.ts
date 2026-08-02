@@ -27,7 +27,7 @@ import { renderFooter } from './sections/footer';
 
 /**
  * As secoes so existem depois que o script monta a pagina, entao o navegador
- * nao encontra o alvo de um link com ancora durante o carregamento — e a
+ * nao encontra o alvo de um link com ancora durante o carregamento, e a
  * restauracao automatica de scroll pode parar numa posicao vazia. O ajuste
  * fica por conta desta funcao, ja com a arvore montada.
  */
@@ -37,7 +37,7 @@ function restorePosition(): void {
 
   const jump = () => {
     if (target) {
-      // 'instant' ignora o scroll-behavior: smooth do CSS — com 'auto' a
+      // 'instant' ignora o scroll-behavior: smooth do CSS. Com 'auto' a
       // chegada vira um deslize longo desde o topo, que se perde no caminho.
       target.scrollIntoView({ behavior: 'instant', block: 'start' });
     } else {

@@ -17,15 +17,16 @@ const pt = {
   'nav.search': 'Buscar',
 
   /* -- hero -- */
-  'hero.eyebrow': 'Suporte técnico → desenvolvimento full stack',
+  'hero.eyebrow': 'Desenvolvimento, software livre e self-hosting',
   'hero.title.a': 'Código, rede e dados',
   'hero.title.b': 'sob meu controle',
   'hero.lead':
-    'Sou o Caio. Na Playlist Software Solutions eu lidero a frente de front-end de uma aplicação de IA para radiodifusão e também atuo no back-end dela. Fora do expediente eu mantenho meu próprio homelab — porque software aberto e dados sob meu controle não são detalhe, são o ponto de partida.',
+    'Sou o Caio. Escrevo software e mantenho meu próprio servidor rodando o que antes eu deixava na mão dos outros. Gosto de construir coisas que funcionam bem e ainda por cima têm personalidade.',
   'hero.cta.primary': 'Ver o homelab',
   'hero.cta.secondary': 'Falar comigo',
   'hero.terminal.command': 'systemctl status --user',
   'hero.terminal.state': 'active (running)',
+  'hero.terminal.more': 'outros serviços no homelab',
   'hero.terminal.note': 'Serviços rodando na minha própria infraestrutura.',
   'hero.scroll': 'Role para continuar',
 
@@ -33,22 +34,26 @@ const pt = {
   'about.label': 'Sobre',
   'about.title': 'Quem está do outro lado do terminal',
   'about.p1':
-    'Comecei em 2021, num estágio de T.I onde aprendi a construir REST API com Node e montar interface com Angular. De lá pra cá o caminho passou por suporte técnico, banco de dados, redes e, mais recentemente, agentes de IA.',
+    'Minha relação com a tecnologia começou cedo, ainda na época dos computadores Pentium, da internet discada e das intermináveis horas esperando um jogo, anime ou filme terminar de baixar. O que começou como curiosidade acabou se transformando em vontade de entender como as coisas funcionavam e, mais tarde, em paixão pelo desenvolvimento de software.',
   'about.p2':
-    'Hoje, na Playlist Software Solutions, lidero a frente de front-end de uma aplicação de IA para radiodifusão e atuo também no back-end dela. Na prática é o que eu queria: entender a aplicação de ponta a ponta — a query, o endpoint, o componente, o container e o DNS que aponta para ele.',
+    'Gosto de criar soluções úteis, explorar novas tecnologias e desenvolver projetos que tenham personalidade. Tenho um interesse especial por software livre, projetos open source, self-hosting, segurança e privacidade. Para mim, programar não é apenas fazer algo funcionar. Também envolve organização, boas práticas, clean code e o cuidado de transformar ideias em experiências simples, bonitas e eficientes.',
   'about.p3':
-    'O resto do meu tempo se divide entre jogos, música, anime e um servidor que eu insisto em quebrar e consertar de novo. Aprendi mais administrando meu homelab do que em qualquer playlist de tutorial.',
+    'Fora do código, grande parte da minha personalidade vem das coisas que sempre fizeram parte da minha vida. Sou apaixonado por videogames desde o Nintendo 64, com jogos como The Legend of Zelda: Ocarina of Time, Majora’s Mask e Star Fox 64, além de franquias como Pokémon e Mega Man. Também gosto muito de animes, mangás, metalcore e dificilmente começo algum projeto sem café ou uma lata de Monster por perto.',
+  'about.p4':
+    'No fim, meu trabalho acaba sendo uma mistura de tudo isso: tecnologia, criatividade, curiosidade e um pouco das referências que me acompanharam ao longo da vida. Estou sempre procurando aprender algo novo, experimentar ideias diferentes e desenvolver projetos que não apenas funcionem bem, mas que também transmitam um pouco de quem eu sou.',
   'about.stats.since': 'Primeiro estágio em T.I',
   'about.stats.services': 'Serviços self-hosted',
   'about.stats.stack': 'Tecnologias na stack',
   'about.stats.langs': 'Idiomas fluentes',
   'about.interests': 'Fora do código',
+  'about.party': 'Party',
+  'about.party.note': 'Quem me acompanha desde o Nintendo 64.',
 
   /* -- stack -- */
   'stack.label': 'Stack',
   'stack.title': 'As ferramentas que eu realmente uso',
   'stack.desc':
-    'Sem barra de porcentagem e sem nota de autoavaliação — esse número não significa nada. Aqui está o que eu realmente uso para construir e sustentar software.',
+    'Sem barra de porcentagem e sem nota de autoavaliação, porque esse número não significa nada. Aqui está o que eu uso para construir e sustentar software.',
   'stack.alongside': 'Também no dia a dia',
   'stack.foundations': 'Base teórica',
 
@@ -56,7 +61,7 @@ const pt = {
   'homelab.label': 'Homelab',
   'homelab.title': 'O servidor é meu. Os dados também.',
   'homelab.desc':
-    'Software livre deixou de ser hobby e virou infraestrutura. Cada serviço aqui substitui um produto de terceiro que eu prefiro não alimentar com os meus dados — e cada um me ensinou alguma coisa sobre rede, container ou backup no caminho.',
+    'Software livre deixou de ser hobby e virou infraestrutura. Cada serviço aqui substitui um produto de terceiro que eu prefiro não alimentar com os meus dados, e cada um me ensinou alguma coisa sobre rede, container ou backup no caminho.',
   'homelab.hosted': 'Serviços que eu hospedo',
   'homelab.daily': 'Software livre no dia a dia',
   'homelab.note':
@@ -70,7 +75,7 @@ const pt = {
   'projects.filter.all': 'Todos',
   'projects.empty.title': 'Em construção',
   'projects.empty.text':
-    'Nada publicado por enquanto — por escolha. Enquanto isso, o código que eu escrevo fica aberto no GitHub, inclusive o deste site.',
+    'Nada publicado por enquanto, e isso é por escolha. Enquanto isso, o código que eu escrevo fica aberto no GitHub, inclusive o deste site.',
   'projects.empty.cta': 'Ver o GitHub',
   'projects.repo': 'Repositório',
   'projects.demo': 'Demonstração',
@@ -84,7 +89,7 @@ const pt = {
   'journey.work': 'Experiência',
   'journey.education': 'Formação',
   'journey.current': 'Atual',
-  'journey.ongoing': 'Em andamento',
+  'journey.ongoing': 'Próximo passo',
 
   /* -- contato -- */
   'contact.label': 'Contato',
@@ -138,15 +143,16 @@ const en: Record<keyof typeof pt, string> = {
   'nav.search': 'Search',
 
   /* -- hero -- */
-  'hero.eyebrow': 'Technical support → full stack development',
+  'hero.eyebrow': 'Development, open source and self-hosting',
   'hero.title.a': 'Code, network and data',
   'hero.title.b': 'under my control',
   'hero.lead':
-    "I'm Caio. At Playlist Software Solutions I lead the front-end of an AI application for broadcasting and work on its back-end too. Off the clock I run my own homelab — because open software and data under my own control aren't a detail, they're the starting point.",
+    "I'm Caio. I write software and keep my own server running the things I used to leave in other people's hands. I like building stuff that works well and still has some personality to it.",
   'hero.cta.primary': 'See the homelab',
   'hero.cta.secondary': 'Get in touch',
   'hero.terminal.command': 'systemctl status --user',
   'hero.terminal.state': 'active (running)',
+  'hero.terminal.more': 'more services in the homelab',
   'hero.terminal.note': 'Services running on my own infrastructure.',
   'hero.scroll': 'Scroll to continue',
 
@@ -154,22 +160,26 @@ const en: Record<keyof typeof pt, string> = {
   'about.label': 'About',
   'about.title': "Who's on the other side of the terminal",
   'about.p1':
-    'I started in 2021, in an IT internship where I learned to build REST APIs with Node and interfaces with Angular. Since then the road has gone through technical support, databases, networking and, more recently, AI agents.',
+    'My relationship with technology started early, back in the days of Pentium computers, dial-up internet and endless hours waiting for a game, an anime or a movie to finish downloading. What began as curiosity turned into wanting to understand how things worked and, later on, into a passion for building software.',
   'about.p2':
-    'Today, at Playlist Software Solutions, I lead the front-end of an AI application for broadcasting and work on its back-end too. In practice it is what I wanted: understanding the application end to end — the query, the endpoint, the component, the container and the DNS record pointing at it.',
+    'I like creating useful solutions, exploring new technologies and building projects that have a personality of their own. I have a particular interest in free software, open source, self-hosting, security and privacy. To me, programming is not just about making something work. It also involves organisation, good practices, clean code and the care of turning ideas into experiences that are simple, good looking and efficient.',
   'about.p3':
-    'The rest of my time is split between games, music, anime and a server I keep breaking and fixing again. I have learned more running my homelab than in any tutorial playlist.',
+    "Outside of code, a lot of who I am comes from the things that have always been part of my life. I have loved video games since the Nintendo 64, with titles like The Legend of Zelda: Ocarina of Time, Majora's Mask and Star Fox 64, plus franchises like Pokémon and Mega Man. I am also deep into anime, manga and metalcore, and I rarely start a project without coffee or a can of Monster nearby.",
+  'about.p4':
+    'In the end, my work turns out to be a mix of all that: technology, creativity, curiosity and a bit of the references that have followed me through life. I am always looking to learn something new, try out different ideas and build projects that not only work well, but also say something about who I am.',
   'about.stats.since': 'First IT internship',
   'about.stats.services': 'Self-hosted services',
   'about.stats.stack': 'Technologies in the stack',
   'about.stats.langs': 'Fluent languages',
   'about.interests': 'Outside the code',
+  'about.party': 'Party',
+  'about.party.note': 'The ones who have been with me since the Nintendo 64.',
 
   /* -- stack -- */
   'stack.label': 'Stack',
   'stack.title': 'The tools I actually use',
   'stack.desc':
-    'No percentage bars and no self-assessed scores — that number means nothing. Here is what I actually use to build and run software.',
+    'No percentage bars and no self-assessed scores, because that number means nothing. Here is what I use to build and run software.',
   'stack.alongside': 'Also part of the day',
   'stack.foundations': 'Foundations',
 
@@ -177,7 +187,7 @@ const en: Record<keyof typeof pt, string> = {
   'homelab.label': 'Homelab',
   'homelab.title': 'The server is mine. So is the data.',
   'homelab.desc':
-    'Open source stopped being a hobby and became infrastructure. Every service here replaces a third-party product I would rather not feed with my own data — and each one taught me something about networking, containers or backups along the way.',
+    'Open source stopped being a hobby and became infrastructure. Every service here replaces a third-party product I would rather not feed with my own data, and each one taught me something about networking, containers or backups along the way.',
   'homelab.hosted': 'Services I host',
   'homelab.daily': 'Open source I use daily',
   'homelab.note':
@@ -191,7 +201,7 @@ const en: Record<keyof typeof pt, string> = {
   'projects.filter.all': 'All',
   'projects.empty.title': 'Under construction',
   'projects.empty.text':
-    'Nothing published yet — on purpose. In the meantime, the code I write stays open on GitHub, including this site.',
+    'Nothing published yet, and that is on purpose. In the meantime, the code I write stays open on GitHub, including this site.',
   'projects.empty.cta': 'Visit my GitHub',
   'projects.repo': 'Repository',
   'projects.demo': 'Live demo',
@@ -205,7 +215,7 @@ const en: Record<keyof typeof pt, string> = {
   'journey.work': 'Experience',
   'journey.education': 'Education',
   'journey.current': 'Current',
-  'journey.ongoing': 'In progress',
+  'journey.ongoing': 'Next step',
 
   /* -- contact -- */
   'contact.label': 'Contact',
@@ -254,23 +264,23 @@ export function translate(lang: Lang, key: StringKey): string {
 /** Interesses exibidos na secao "sobre". */
 export const interests: Record<Lang, string[]> = {
   pt: [
-    'Programação',
+    'Videogames',
+    'Pixel art',
+    'RPG',
+    'Anime e mangá',
+    'Metalcore',
     'Software livre',
     'Privacidade',
-    'Redes',
-    'Jogos',
-    'Música',
-    'Anime',
-    'Cultura japonesa',
+    'Self-hosting',
   ],
   en: [
-    'Programming',
+    'Video games',
+    'Pixel art',
+    'RPG',
+    'Anime and manga',
+    'Metalcore',
     'Open source',
     'Privacy',
-    'Networking',
-    'Games',
-    'Music',
-    'Anime',
-    'Japanese culture',
+    'Self-hosting',
   ],
 };

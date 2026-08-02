@@ -242,6 +242,26 @@
   white-space: nowrap;
 }
 
+.term__more {
+  padding-top: 0.3rem;
+  opacity: 0;
+}
+
+.term.is-ready .term__more {
+  animation: term-line 0.34s var(--ease-out) forwards;
+  animation-delay: calc(180ms + var(--row-index) * 90ms);
+}
+
+.term__more a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(var(--accent-rgb), 0.4);
+}
+
+.term__more a:hover {
+  border-bottom-style: solid;
+}
+
 .term__note {
   margin-top: 0.9rem;
   padding-top: 0.8rem;

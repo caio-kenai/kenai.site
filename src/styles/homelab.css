@@ -65,11 +65,24 @@
   transform: scaleY(1);
 }
 
+/* Altura fixa com largura livre: alguns projetos so publicam o logo em
+   formato de assinatura horizontal, que ficaria ilegivel num quadrado. */
 .lab__logo {
-  display: block;
-  width: 2rem;
-  height: 2rem;
-  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  height: 1.75rem;
+  margin-bottom: 0.55rem;
+}
+
+.lab__logo .logo {
+  width: auto;
+  height: 100%;
+  max-width: 7.5rem;
+}
+
+.lab__logo .logo--monogram {
+  width: 1.75rem;
+  height: 100%;
 }
 
 .lab__domain {
