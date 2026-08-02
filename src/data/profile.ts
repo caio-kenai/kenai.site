@@ -1,14 +1,11 @@
 import type { Localized } from './types';
 
-/**
- * Identidade do site. A marca exibida e kenai.dev; kenai.site permanece
- * apenas como dominio tecnico de hospedagem.
- */
+/** Marca exibida é kenai.dev. kenai.site fica só como domínio de hospedagem. */
 export const profile = {
   brand: 'kenai.dev',
   brandName: 'kenai',
   brandTld: '.dev',
-  /** Leitura de "kenai" em katakana, usada como marca d'agua discreta. */
+  /** "kenai" em katakana. */
   katakana: 'ケナイ',
 
   name: 'Caio Oliveira Pacifico',
@@ -37,6 +34,6 @@ export const profile = {
     repo: 'https://github.com/caio-kenai/kenai.site',
   },
 
-  /** Identificador usado nas duas redes sociais. */
+  /** Mesmo identificador nas duas redes. */
   social: '@caiokenai',
 } as const;

@@ -2,25 +2,20 @@ import type { Sprite } from '../data/sprites';
 import { esc } from './dom';
 
 interface SpriteOptions {
-  /** Classe do posicionamento na secao que recebe o personagem. */
+  /** Classe de posicionamento na seção. */
   className?: string;
-  /** Altura renderizada, em qualquer unidade CSS. */
+  /** Altura renderizada, em unidade CSS. */
   height?: string;
-  /** Espelha o sprite na horizontal, para ele "olhar" para o conteudo. */
+  /** Espelha na horizontal. */
   flip?: boolean;
 }
 
-/**
- * Personagem apoiado num pedestal luminoso. E decorativo, entao fica fora da
- * arvore de acessibilidade, mas guarda o nome no title para quem passar o
- * ponteiro por cima.
- */
+/** Personagem sobre o pedestal. Decorativo, fica fora da árvore de acessibilidade. */
 export function sprite(character: Sprite, options: SpriteOptions = {}): string {
   const { className = '', height, flip } = options;
   const classes = ['sprite', className, flip ? 'sprite--flip' : ''].filter(Boolean).join(' ');
 
-  // A correcao optica entra na altura pedida pela secao, para duas artes de
-  // escalas diferentes ficarem parecidas lado a lado.
+  // o ajuste óptico entra na altura pedida pela seção
   const optical = character.optical ?? 1;
   const alturaFinal = height && optical !== 1 ? `calc(${height} * ${optical})` : height;
   const style = alturaFinal ? ` style="--sprite-h: ${alturaFinal}"` : '';

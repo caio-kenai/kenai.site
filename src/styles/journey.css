@@ -127,8 +127,7 @@
   padding: 0.18rem 0.45rem;
 }
 
-/* Link e Zelda fecham a trilha, um em cada ponta da linha do tempo.
-   O recuo a esquerda alinha o Link com a coluna dos marcadores. */
+/* o recuo alinha o primeiro sprite com a coluna dos marcadores */
 .jrn__walkers {
   display: flex;
   align-items: flex-end;

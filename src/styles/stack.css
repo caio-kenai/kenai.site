@@ -1,5 +1,5 @@
 /* ==========================================================================
-   LOGO (compartilhado entre a stack e o homelab)
+   LOGO, compartilhado entre a stack e o homelab
    ========================================================================== */
 
 .logo {
@@ -9,7 +9,7 @@
   display: block;
 }
 
-/* Logos monocromaticos escuros sumiriam no fundo grafite. */
+/* logos escuros sumiriam no fundo grafite */
 [data-theme='dark'] .logo--invert-dark {
   filter: invert(1) brightness(1.6);
 }
@@ -57,9 +57,7 @@
   color: var(--accent);
 }
 
-/* Seis colunas fixas: o maior grupo preenche a linha exata e todos os grupos
-   ficam com o mesmo tamanho de bloco. Com auto-fill sobravam trilhas vazias
-   e um terco da largura ficava ocioso. */
+/* seis colunas fixas: com auto-fill sobravam trilhas vazias */
 .tech-grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));

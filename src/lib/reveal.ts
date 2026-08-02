@@ -1,6 +1,6 @@
 import { qs, qsa } from './dom';
 
-/** Revela elementos `.reveal` quando entram na viewport. */
+/** Revela `.reveal` ao entrar na viewport. */
 export function initReveal(): void {
   const targets = qsa('.reveal');
   if (targets.length === 0) return;
@@ -27,7 +27,7 @@ export function initReveal(): void {
   targets.forEach((target) => observer.observe(target));
 }
 
-/** Sincroniza a barra de progresso do topo com a rolagem da pagina. */
+/** Barra de progresso do scroll. */
 export function initScrollProgress(): void {
   const bar = qs('#scrollProgress');
   if (!bar) return;

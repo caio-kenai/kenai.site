@@ -1,7 +1,7 @@
-/** Idiomas suportados pela interface. */
+/** Idiomas suportados. */
 export type Lang = 'pt' | 'en';
 
-/** Texto disponivel nos dois idiomas. */
+/** Texto nos dois idiomas. */
 export interface Localized {
   pt: string;
   en: string;
@@ -9,19 +9,19 @@ export interface Localized {
 
 export type Theme = 'dark' | 'light';
 
-/** Conjunto de icones em que o logo esta guardado (public/icons/<set>/). */
+/** Pasta do logo em public/icons/. */
 export type IconSet = 'tech' | 'lab';
 
-/** Formato do arquivo do logo. Alguns projetos so publicam PNG. */
+/** Alguns projetos só publicam PNG. */
 export type IconExt = 'svg' | 'png';
 
 export interface Tech {
   name: string;
-  /** Arquivo do logo, sem extensao. Ausente = tecnologia sem logo publico. */
+  /** Arquivo do logo, sem extensão. Ausente cai no monograma. */
   slug?: string;
   set?: IconSet;
   ext?: IconExt;
-  /** Logos monocromaticos escuros precisam ser invertidos no tema escuro. */
+  /** Logos escuros precisam inverter no tema escuro. */
   invertOnDark?: boolean;
 }
 
@@ -31,15 +31,15 @@ export interface TechGroup {
   items: Tech[];
 }
 
-/** Servico do homelab ou software livre de uso diario. */
+/** Serviço do homelab ou software de uso diário. */
 export interface HomelabEntry {
   name: string;
   role: Localized;
-  /** Dominio do problema que o servico resolve, usado como etiqueta. */
+  /** Etiqueta do card. */
   domain: Localized;
-  /** Endereco do projeto upstream. */
+  /** Site do projeto. */
   url: string;
-  /** Arquivo do logo em public/icons/lab/. Ausente = usa monograma. */
+  /** Arquivo em public/icons/lab/. Ausente cai no monograma. */
   slug?: string;
   ext?: IconExt;
   invertOnDark?: boolean;
@@ -62,12 +62,12 @@ export interface JourneyEntry {
 export interface Project {
   id: string;
   name: string;
-  /** Categoria usada pelos filtros da secao de projetos. */
+  /** Usada pelos filtros. */
   category: string;
   summary: Localized;
-  /** O que o projeto se propoe a resolver. */
+  /** Problema que resolve. */
   goal?: Localized;
-  /** Minha responsabilidade dentro do projeto. */
+  /** Minha responsabilidade. */
   role?: Localized;
   tech: string[];
   repo?: string;

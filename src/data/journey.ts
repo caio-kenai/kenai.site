@@ -1,6 +1,6 @@
 import type { JourneyEntry } from './types';
 
-/** Trajetoria em ordem cronologica inversa. */
+/** Experiência e formação, cada bloco em ordem cronológica inversa. */
 export const journey: JourneyEntry[] = [
   {
     id: 'playlist-tecnico',

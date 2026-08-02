@@ -96,12 +96,12 @@ export function initNav(): void {
   const burger = qs<HTMLButtonElement>('.js-menu');
   if (!nav || !panel || !burger) return;
 
-  /* -- estado condensado ao rolar -- */
+  /* estado condensado ao rolar */
   const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 12);
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 
-  /* -- menu mobile -- */
+  /* menu mobile */
   const setMenu = (open: boolean) => {
     panel.hidden = !open;
     nav.classList.toggle('is-open', open);
@@ -122,13 +122,13 @@ export function initNav(): void {
     }
   });
 
-  // O painel so existe no layout estreito: ao voltar para desktop, e fechado.
+  // o painel só existe no layout estreito
   const wide = window.matchMedia('(min-width: 880px)');
   wide.addEventListener('change', (event) => {
     if (event.matches && !panel.hidden) setMenu(false);
   });
 
-  /* -- controles (existem duas vezes: barra e painel) -- */
+  /* controles, duplicados entre barra e painel */
   qsa('.js-palette').forEach((button) => button.addEventListener('click', () => openPalette()));
   qsa('.js-lang').forEach((button) => button.addEventListener('click', () => toggleLang()));
   qsa('.js-theme').forEach((button) => button.addEventListener('click', () => toggleTheme()));
@@ -146,7 +146,7 @@ export function initNav(): void {
   initScrollSpy();
 }
 
-/** Destaca na navegacao a secao visivel no momento. */
+/** Destaca a seção visível na navegação. */
 function initScrollSpy(): void {
   const links = qsa<HTMLAnchorElement>('.nav__link');
   const byId = new Map(links.map((link) => [link.getAttribute('href')?.slice(1) ?? '', link]));

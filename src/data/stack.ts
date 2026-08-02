@@ -1,9 +1,6 @@
 import type { Localized, TechGroup } from './types';
 
-/**
- * Stack enxuta: so o que sustenta o trabalho de verdade. Sem distincao de
- * "estudando". O que esta aqui, eu uso.
- */
+/** Stack agrupada por camada. */
 export const techGroups: TechGroup[] = [
   {
     id: 'languages',
@@ -73,7 +70,7 @@ export const techGroups: TechGroup[] = [
   },
 ];
 
-/** Bibliotecas e praticas que acompanham a stack, sem logo proprio na grade. */
+/** Bibliotecas e práticas sem logo próprio. */
 export const alongside: Localized[] = [
   { pt: 'REST APIs', en: 'REST APIs' },
   { pt: 'Domain-Driven Design', en: 'Domain-Driven Design' },
@@ -85,7 +82,7 @@ export const alongside: Localized[] = [
   { pt: 'VPN & WireGuard', en: 'VPN & WireGuard' },
 ];
 
-/** Base teorica que sustenta a pratica, vinda da graduacao e do trabalho. */
+/** Base teórica. */
 export const foundations: Localized[] = [
   { pt: 'Sistemas distribuídos', en: 'Distributed systems' },
   { pt: 'Estruturas de dados', en: 'Data structures' },
@@ -95,5 +92,5 @@ export const foundations: Localized[] = [
   { pt: 'Projeto e administração de redes', en: 'Network design and administration' },
 ];
 
-/** Total de tecnologias na grade, usado nas metricas da secao "sobre". */
+/** Total exibido nas métricas do "sobre". */
 export const stackCount = techGroups.reduce((total, group) => total + group.items.length, 0);

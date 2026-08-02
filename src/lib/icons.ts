@@ -1,7 +1,4 @@
-/**
- * Icones inline. Ficam no bundle em vez de virem de um CDN, para manter o
- * site sem nenhuma requisicao externa.
- */
+/** Ícones inline, servidos pelo bundle. */
 
 const wrap = (paths: string, viewBox = '0 0 24 24') =>
   `<svg viewBox="${viewBox}" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${paths}</svg>`;

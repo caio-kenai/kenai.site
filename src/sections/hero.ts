@@ -3,12 +3,12 @@ import { selfHosted } from '../data/homelab';
 import { icons } from '../lib/icons';
 import { loc, lt, qs, qsa, t, tx } from '../lib/dom';
 
-/** Nome de unidade systemd derivado do nome do servico. */
+/** Nome de unidade systemd a partir do nome do serviço. */
 function unitName(name: string): string {
   return `${name.toLowerCase().replace(/[^a-z0-9]/g, '')}.service`;
 }
 
-/** Quantos servicos cabem no painel sem esticar o hero. */
+/** Linhas visíveis no painel. */
 const LINHAS_VISIVEIS = 8;
 
 function renderTerminal(): string {
@@ -112,7 +112,7 @@ export function renderHero(): string {
   `;
 }
 
-/** Revela as linhas do terminal em sequencia, como uma saida real de comando. */
+/** Revela as linhas do terminal em sequência. */
 export function initHero(): void {
   const term = qs('.term');
   if (!term) return;
@@ -135,7 +135,7 @@ export function initHero(): void {
 
   observer.observe(term);
 
-  // Inclina levemente o painel conforme o ponteiro, so em telas com mouse.
+  // tilt só em telas com ponteiro fino
   if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
     attachTilt(term as HTMLElement);
   }

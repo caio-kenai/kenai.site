@@ -10,7 +10,7 @@ function readStored<T extends string>(key: string, allowed: readonly T[]): T | n
     const raw = localStorage.getItem(key);
     return allowed.includes(raw as T) ? (raw as T) : null;
   } catch {
-    // Armazenamento bloqueado (modo privado, politica do navegador): segue sem persistir.
+    // armazenamento bloqueado, segue sem persistir
     return null;
   }
 }
@@ -19,7 +19,7 @@ function write(key: string, value: string): void {
   try {
     localStorage.setItem(key, value);
   } catch {
-    // Sem persistencia disponivel: a preferencia vale apenas para esta sessao.
+    // sem persistência, vale só para esta sessão
   }
 }
 

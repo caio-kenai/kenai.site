@@ -5,7 +5,7 @@
   isolation: isolate;
 }
 
-/* malha tecnica de fundo — desenhada com gradiente, sem imagem */
+/* malha de fundo em gradiente, sem imagem */
 .hero::before {
   content: '';
   position: absolute;
@@ -19,7 +19,7 @@
   pointer-events: none;
 }
 
-/* halo suave do acento, bem contido */
+/* halo do acento */
 .hero::after {
   content: '';
   position: absolute;
@@ -33,7 +33,7 @@
   pointer-events: none;
 }
 
-/* marca d'agua: "kenai" em katakana */
+/* marca d’água em katakana */
 .hero__kana {
   position: absolute;
   top: 42%;
@@ -109,7 +109,7 @@
   color: var(--faint);
 }
 
-/* -- painel de terminal -- */
+/* painel de terminal */
 .hero__panel {
   perspective: 1200px;
 }
@@ -277,7 +277,7 @@
   animation-delay: 1.1s;
 }
 
-/* -- indicador de rolagem -- */
+/* indicador de rolagem */
 .hero__scroll {
   display: inline-flex;
   align-items: center;
