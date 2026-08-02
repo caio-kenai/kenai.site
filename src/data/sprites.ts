@@ -7,6 +7,12 @@ export interface Sprite {
   /** Dimensoes reais, para reservar o espaco antes de carregar. */
   width: number;
   height: number;
+  /**
+   * Correcao optica. Cada arte foi desenhada numa escala diferente: um busto
+   * em close e um corpo inteiro ocupam a mesma altura de moldura mas parecem
+   * de tamanhos bem distintos. O fator aproxima o que o olho compara.
+   */
+  optical?: number;
 }
 
 /**
@@ -22,13 +28,14 @@ export const sprites = {
     width: 92,
     height: 150,
   },
-  /** Jornada: fecha o outro lado, de frente para o Link. */
+  /** Jornada: fecha o outro lado. Desenhada em close, entao entra reduzida. */
   zelda: {
     file: 'zelda.gif',
     name: 'Zelda',
     from: 'The Legend of Zelda',
     width: 108,
     height: 150,
+    optical: 0.85,
   },
   /** Projetos: ainda em construcao. */
   zero: {
