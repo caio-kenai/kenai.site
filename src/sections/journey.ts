@@ -63,9 +63,10 @@ export function renderJourney(): string {
 
         <ol class="jrn__list">${journey.map(renderEntry).join('')}</ol>
 
-        <!-- Link fecha a trilha, no ponto em que a linha do tempo termina. -->
-        <div class="jrn__walker reveal">
+        <!-- Link e Zelda fecham a trilha, um em cada ponta. -->
+        <div class="jrn__walkers reveal">
           ${sprite(sprites.link, { height: '7.5rem' })}
+          ${sprite(sprites.zelda, { height: '7.5rem' })}
         </div>
       </div>
     </section>

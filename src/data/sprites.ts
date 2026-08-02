@@ -14,12 +14,20 @@ export interface Sprite {
  * com que tem alguma relacao, em vez de ficarem enfileirados num bloco so.
  */
 export const sprites = {
-  /** Jornada: a secao e uma trilha, e ele caminha nela. */
+  /** Jornada: a secao e uma trilha, e ele fecha o caminho de um lado. */
   link: {
     file: 'link.gif',
     name: 'Link',
     from: 'Ocarina of Time',
     width: 92,
+    height: 150,
+  },
+  /** Jornada: fecha o outro lado, de frente para o Link. */
+  zelda: {
+    file: 'zelda.gif',
+    name: 'Zelda',
+    from: 'The Legend of Zelda',
+    width: 108,
     height: 150,
   },
   /** Projetos: ainda em construcao. */
