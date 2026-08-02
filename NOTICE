@@ -34,8 +34,8 @@ O QUE NAO ESTA LICENCIADO
 Os itens abaixo sao conteudo pessoal, nao codigo, e NAO estao cobertos pela
 AGPL nem por qualquer outra licenca de uso. Todos os direitos reservados:
 
-  - A ilustracao em art/ e public/img/ — retrato do autor, encomendado por
-    ele. Nao reutilize, redistribua nem crie derivados dessa imagem.
+  - A ilustracao em art/caio-arte.png, retrato do autor, encomendado por ele.
+    Nao reutilize, redistribua nem crie derivados dessa imagem.
 
   - O texto biografico, a trajetoria profissional, a descricao das
     experiencias e a lista de formacao presentes em src/data/ — sao dados
@@ -62,3 +62,17 @@ TERCEIROS
   - As marcas e logotipos representados por esses icones pertencem aos seus
     respectivos detentores e aparecem aqui apenas para identificar as
     tecnologias e os projetos citados.
+
+
+================================================================================
+PERSONAGENS EM public/sprites/ E art/sprites/
+================================================================================
+
+Os sprites de Link, Zero, Gengar e Absol sao personagens protegidos por direito
+autoral de terceiros. Link pertence a Nintendo. Zero pertence a Capcom. Gengar e
+Absol pertencem a Nintendo, Game Freak e The Pokemon Company.
+
+Eles aparecem neste site como referencia pessoal, do mesmo jeito que sao citados
+no texto da secao "sobre". NAO estao licenciados sob a AGPL, nao sao de autoria
+do titular deste repositorio e nao acompanham nenhuma permissao de reuso. Quem
+usar este projeto como base deve remove-los ou substitui-los por arte propria.

@@ -23,8 +23,8 @@ export const profile = {
   company: 'Playlist Software Solutions',
 
   location: {
-    pt: 'Ipatinga, Minas Gerais — Brasil',
-    en: 'Ipatinga, Minas Gerais — Brazil',
+    pt: 'Ipatinga, Minas Gerais, Brasil',
+    en: 'Ipatinga, Minas Gerais, Brazil',
   } satisfies Localized,
 
   email: 'caiokenai@tutamail.com',

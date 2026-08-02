@@ -69,8 +69,16 @@ function renderFilters(): string {
 function renderEmptyState(): string {
   return `
     <div class="proj__empty reveal">
-      <div class="proj__empty-frame" aria-hidden="true">
-        <span class="proj__empty-glyph">${icons.terminal}</span>
+      <div class="proj__empty-stage" aria-hidden="true">
+        <img
+          class="proj__empty-sprite"
+          src="/sprites/zero.gif"
+          width="129"
+          height="150"
+          alt=""
+          loading="lazy"
+          decoding="async"
+        />
       </div>
       <h3 class="proj__empty-title" ${tx('projects.empty.title')}>${t('projects.empty.title')}</h3>
       <p class="proj__empty-text" ${tx('projects.empty.text')}>${t('projects.empty.text')}</p>

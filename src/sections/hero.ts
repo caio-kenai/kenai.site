@@ -8,8 +8,14 @@ function unitName(name: string): string {
   return `${name.toLowerCase().replace(/[^a-z0-9]/g, '')}.service`;
 }
 
+/** Quantos servicos cabem no painel sem esticar o hero. */
+const LINHAS_VISIVEIS = 8;
+
 function renderTerminal(): string {
-  const rows = selfHosted
+  const visiveis = selfHosted.slice(0, LINHAS_VISIVEIS);
+  const restantes = selfHosted.length - visiveis.length;
+
+  const rows = visiveis
     .map(
       (service, index) => `
         <li class="term__row" style="--row-index: ${index}">
@@ -37,6 +43,14 @@ function renderTerminal(): string {
         </p>
 
         <ul class="term__rows">${rows}</ul>
+
+        ${
+          restantes > 0
+            ? `<p class="term__more" style="--row-index: ${visiveis.length}">
+                 <a href="#homelab">+ ${restantes} <span ${tx('hero.terminal.more')}>${t('hero.terminal.more')}</span></a>
+               </p>`
+            : ''
+        }
 
         <p class="term__note" ${tx('hero.terminal.note')}>${t('hero.terminal.note')}</p>
       </div>
@@ -70,17 +84,19 @@ export function renderHero(): string {
 
           <dl class="hero__meta">
             <div class="hero__meta-item">
-              <dt class="visually-hidden">Status</dt>
+              <dt class="visually-hidden">Local</dt>
               <dd>
                 <span class="dot dot--pulse" aria-hidden="true"></span>
-                <span ${loc(profile.role)}>${lt(profile.role)}</span>
-                <span class="hero__meta-sep" aria-hidden="true">·</span>
-                <span>${profile.company}</span>
+                <span ${loc(profile.location)}>${lt(profile.location)}</span>
               </dd>
             </div>
             <div class="hero__meta-item">
-              <dt class="visually-hidden">Local</dt>
-              <dd ${loc(profile.location)}>${lt(profile.location)}</dd>
+              <dt class="visually-hidden">Idiomas</dt>
+              <dd>
+                <span>Português</span>
+                <span class="hero__meta-sep" aria-hidden="true">·</span>
+                <span>English</span>
+              </dd>
             </div>
           </dl>
         </div>

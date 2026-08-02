@@ -6,7 +6,13 @@ import { logo } from '../lib/logo';
 function renderTile(tech: Tech): string {
   return `
     <li class="tech">
-      ${logo({ name: tech.name, slug: tech.slug, set: tech.set, invertOnDark: tech.invertOnDark })}
+      ${logo({
+        name: tech.name,
+        slug: tech.slug,
+        set: tech.set,
+        ext: tech.ext,
+        invertOnDark: tech.invertOnDark,
+      })}
       <span class="tech__name">${esc(tech.name)}</span>
     </li>
   `;

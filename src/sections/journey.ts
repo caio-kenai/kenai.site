@@ -17,7 +17,7 @@ function renderEntry(entry: JourneyEntry, index: number): string {
 
   // Em algo em curso a etiqueta ja comunica o periodo; exibir os dois lado a
   // lado repetiria a mesma palavra. Um curso esta "em andamento", um cargo
-  // esta "atual" — a etiqueta muda conforme o tipo de entrada.
+  // esta "atual", entao a etiqueta muda conforme o tipo de entrada.
   const ongoingKey = entry.kind === 'education' ? ('journey.ongoing' as const) : ('journey.current' as const);
   const timing = entry.current
     ? `<span class="jrn__badge">

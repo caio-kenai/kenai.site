@@ -2,7 +2,7 @@ import type { Localized, TechGroup } from './types';
 
 /**
  * Stack enxuta: so o que sustenta o trabalho de verdade. Sem distincao de
- * "estudando" — o que esta aqui, eu uso.
+ * "estudando". O que esta aqui, eu uso.
  */
 export const techGroups: TechGroup[] = [
   {
@@ -34,6 +34,7 @@ export const techGroups: TechGroup[] = [
     items: [
       { name: '.NET', slug: 'dotnetcore' },
       { name: 'Node.js', slug: 'nodejs' },
+      { name: 'NestJS', slug: 'nestjs', set: 'lab' },
       { name: 'Express', slug: 'express', invertOnDark: true },
       { name: 'Flask', slug: 'flask', invertOnDark: true },
     ],
@@ -47,7 +48,6 @@ export const techGroups: TechGroup[] = [
       { name: 'MariaDB', slug: 'mariadb' },
       { name: 'MongoDB', slug: 'mongodb' },
       { name: 'Redis', slug: 'redis' },
-      { name: 'ChromaDB' },
     ],
   },
   {
@@ -57,7 +57,6 @@ export const techGroups: TechGroup[] = [
       { name: 'LangChain', slug: 'langchain', set: 'lab' },
       { name: 'LangGraph', slug: 'langgraph', set: 'lab' },
       { name: 'CrewAI', slug: 'crewai', set: 'lab' },
-      { name: 'RAG' },
     ],
   },
   {
@@ -69,6 +68,7 @@ export const techGroups: TechGroup[] = [
       { name: 'Git', slug: 'git' },
       { name: 'AWS', slug: 'amazonwebservices', invertOnDark: true },
       { name: 'Cloudflare', slug: 'cloudflare' },
+      { name: 'Vercel', slug: 'vercel', set: 'lab', invertOnDark: true },
     ],
   },
 ];
@@ -95,5 +95,5 @@ export const foundations: Localized[] = [
   { pt: 'Projeto e administração de redes', en: 'Network design and administration' },
 ];
 
-/** Total de tecnologias na grade — usado nas metricas da secao "sobre". */
+/** Total de tecnologias na grade, usado nas metricas da secao "sobre". */
 export const stackCount = techGroups.reduce((total, group) => total + group.items.length, 0);

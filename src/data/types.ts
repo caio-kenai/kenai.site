@@ -12,11 +12,15 @@ export type Theme = 'dark' | 'light';
 /** Conjunto de icones em que o logo esta guardado (public/icons/<set>/). */
 export type IconSet = 'tech' | 'lab';
 
+/** Formato do arquivo do logo. Alguns projetos so publicam PNG. */
+export type IconExt = 'svg' | 'png';
+
 export interface Tech {
   name: string;
   /** Arquivo do logo, sem extensao. Ausente = tecnologia sem logo publico. */
   slug?: string;
   set?: IconSet;
+  ext?: IconExt;
   /** Logos monocromaticos escuros precisam ser invertidos no tema escuro. */
   invertOnDark?: boolean;
 }
@@ -37,6 +41,8 @@ export interface HomelabEntry {
   url: string;
   /** Arquivo do logo em public/icons/lab/. Ausente = usa monograma. */
   slug?: string;
+  ext?: IconExt;
+  invertOnDark?: boolean;
 }
 
 export type JourneyKind = 'work' | 'education';
