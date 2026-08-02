@@ -1,10 +1,9 @@
 /* ==========================================================================
    SPRITE
-   Personagem apoiado num pedestal luminoso, usado solto dentro das secoes.
+   Personagem sobre pedestal, usado solto dentro das seções.
    ========================================================================== */
 
-/* A altura fica na imagem, não no contêiner: dentro de um grid a
-   porcentagem não resolve e o sprite vazava para fora da caixa. */
+/* a altura fica na imagem: dentro de um grid a porcentagem não resolve */
 .sprite {
   --sprite-h: 7rem;
   position: relative;
@@ -15,7 +14,7 @@
   pointer-events: none;
 }
 
-/* pedestal, o mesmo elemento em todas as aparicoes */
+/* pedestal */
 .sprite::after {
   content: '';
   position: absolute;
@@ -44,7 +43,7 @@
   scale: -1 1;
 }
 
-/* respiro leve, para o personagem nao parecer colado na pagina */
+/* respiro */
 @keyframes sprite-idle {
   0%,
   100% {

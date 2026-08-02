@@ -19,8 +19,7 @@
   color: var(--accent);
 }
 
-/* Colunas fixas por faixa: os 8 servicos preenchem 4x2 e os 3 programas
-   preenchem uma linha, sem deixar celulas vazias na grade. */
+/* colunas fixas para a grade não deixar células vazias */
 .lab__grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -65,8 +64,7 @@
   transform: scaleY(1);
 }
 
-/* Altura fixa com largura livre: alguns projetos so publicam o logo em
-   formato de assinatura horizontal, que ficaria ilegivel num quadrado. */
+/* altura fixa e largura livre, para logos em assinatura horizontal */
 .lab__logo {
   display: flex;
   align-items: center;
@@ -122,7 +120,7 @@
   color: var(--accent);
 }
 
-/* -- fechamento: nota e o fantasma ao lado dela -- */
+/* nota final e sprite ao lado */
 .lab__closing {
   display: flex;
   align-items: flex-end;

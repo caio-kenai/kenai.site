@@ -1,7 +1,7 @@
 import type { Lang } from './types';
 
 const pt = {
-  /* -- navegacao -- */
+  /* navegação */
   'nav.aria': 'Navegação principal',
   'nav.about': 'Sobre',
   'nav.stack': 'Stack',
@@ -16,7 +16,7 @@ const pt = {
   'nav.lang': 'Switch to English',
   'nav.search': 'Buscar',
 
-  /* -- hero -- */
+  /* hero */
   'hero.eyebrow': 'Desenvolvimento, software livre e self-hosting',
   'hero.title.a': 'Código, rede e dados',
   'hero.title.b': 'sob meu controle',
@@ -30,7 +30,7 @@ const pt = {
   'hero.terminal.note': 'Serviços rodando na minha própria infraestrutura.',
   'hero.scroll': 'Role para continuar',
 
-  /* -- sobre -- */
+  /* sobre */
   'about.label': 'Sobre',
   'about.title': 'Quem está do outro lado do terminal',
   'about.p1':
@@ -47,7 +47,7 @@ const pt = {
   'about.stats.langs': 'Idiomas fluentes',
   'about.interests': 'Fora do código',
 
-  /* -- stack -- */
+  /* stack */
   'stack.label': 'Stack',
   'stack.title': 'As ferramentas que eu realmente uso',
   'stack.desc':
@@ -55,7 +55,7 @@ const pt = {
   'stack.alongside': 'Também no dia a dia',
   'stack.foundations': 'Base teórica',
 
-  /* -- homelab -- */
+  /* homelab */
   'homelab.label': 'Homelab',
   'homelab.title': 'O servidor é meu. Os dados também.',
   'homelab.desc':
@@ -65,7 +65,7 @@ const pt = {
   'homelab.note':
     'Este site segue a mesma regra: fontes self-hosted, sem CDN, sem analytics e sem uma única requisição a terceiros.',
 
-  /* -- projetos -- */
+  /* projetos */
   'projects.label': 'Projetos',
   'projects.title': 'O que eu construo',
   'projects.desc':
@@ -80,7 +80,7 @@ const pt = {
   'projects.goal': 'Objetivo',
   'projects.role': 'Meu papel',
 
-  /* -- jornada -- */
+  /* jornada */
   'journey.label': 'Jornada',
   'journey.title': 'Como eu cheguei até aqui',
   'journey.desc': 'Experiência profissional e formação, do mais recente ao mais antigo.',
@@ -89,7 +89,7 @@ const pt = {
   'journey.current': 'Atual',
   'journey.ongoing': 'Próximo passo',
 
-  /* -- contato -- */
+  /* contato */
   'contact.label': 'Contato',
   'contact.title': 'Abra um canal',
   'contact.desc':
@@ -100,13 +100,13 @@ const pt = {
   'contact.copy': 'Copiar e-mail',
   'contact.copied': 'Copiado',
 
-  /* -- rodape -- */
+  /* rodapé */
   'footer.built': 'Escrito, versionado e hospedado por mim.',
   'footer.source': 'Código-fonte',
   'footer.license': 'Código sob AGPL-3.0',
   'footer.privacy': 'Sem cookies, sem rastreadores, sem requisições a terceiros.',
 
-  /* -- paleta de comandos -- */
+  /* paleta de comandos */
   'palette.title': 'Paleta de comandos',
   'palette.placeholder': 'Buscar seção ou comando…',
   'palette.empty': 'Nenhum resultado',
@@ -125,7 +125,7 @@ const pt = {
 };
 
 const en: Record<keyof typeof pt, string> = {
-  /* -- navigation -- */
+  /* navigation */
   'nav.aria': 'Main navigation',
   'nav.about': 'About',
   'nav.stack': 'Stack',
@@ -140,7 +140,7 @@ const en: Record<keyof typeof pt, string> = {
   'nav.lang': 'Mudar para português',
   'nav.search': 'Search',
 
-  /* -- hero -- */
+  /* hero */
   'hero.eyebrow': 'Development, open source and self-hosting',
   'hero.title.a': 'Code, network and data',
   'hero.title.b': 'under my control',
@@ -154,7 +154,7 @@ const en: Record<keyof typeof pt, string> = {
   'hero.terminal.note': 'Services running on my own infrastructure.',
   'hero.scroll': 'Scroll to continue',
 
-  /* -- about -- */
+  /* about */
   'about.label': 'About',
   'about.title': "Who's on the other side of the terminal",
   'about.p1':
@@ -171,7 +171,7 @@ const en: Record<keyof typeof pt, string> = {
   'about.stats.langs': 'Fluent languages',
   'about.interests': 'Outside the code',
 
-  /* -- stack -- */
+  /* stack */
   'stack.label': 'Stack',
   'stack.title': 'The tools I actually use',
   'stack.desc':
@@ -179,7 +179,7 @@ const en: Record<keyof typeof pt, string> = {
   'stack.alongside': 'Also part of the day',
   'stack.foundations': 'Foundations',
 
-  /* -- homelab -- */
+  /* homelab */
   'homelab.label': 'Homelab',
   'homelab.title': 'The server is mine. So is the data.',
   'homelab.desc':
@@ -189,7 +189,7 @@ const en: Record<keyof typeof pt, string> = {
   'homelab.note':
     'This site follows the same rule: self-hosted fonts, no CDN, no analytics and not a single third-party request.',
 
-  /* -- projects -- */
+  /* projects */
   'projects.label': 'Projects',
   'projects.title': 'What I build',
   'projects.desc':
@@ -204,7 +204,7 @@ const en: Record<keyof typeof pt, string> = {
   'projects.goal': 'Goal',
   'projects.role': 'My role',
 
-  /* -- journey -- */
+  /* journey */
   'journey.label': 'Journey',
   'journey.title': 'How I got here',
   'journey.desc': 'Professional experience and education, most recent first.',
@@ -213,7 +213,7 @@ const en: Record<keyof typeof pt, string> = {
   'journey.current': 'Current',
   'journey.ongoing': 'Next step',
 
-  /* -- contact -- */
+  /* contact */
   'contact.label': 'Contact',
   'contact.title': 'Open a channel',
   'contact.desc':
@@ -224,13 +224,13 @@ const en: Record<keyof typeof pt, string> = {
   'contact.copy': 'Copy email',
   'contact.copied': 'Copied',
 
-  /* -- footer -- */
+  /* footer */
   'footer.built': 'Written, versioned and hosted by me.',
   'footer.source': 'Source code',
   'footer.license': 'Code under AGPL-3.0',
   'footer.privacy': 'No cookies, no trackers, no third-party requests.',
 
-  /* -- command palette -- */
+  /* command palette */
   'palette.title': 'Command palette',
   'palette.placeholder': 'Search a section or command…',
   'palette.empty': 'No results',
@@ -252,12 +252,12 @@ export type StringKey = keyof typeof pt;
 
 const dictionaries: Record<Lang, Record<StringKey, string>> = { pt, en };
 
-/** Traduz uma chave para o idioma informado. */
+/** Traduz uma chave no idioma informado. */
 export function translate(lang: Lang, key: StringKey): string {
   return dictionaries[lang][key];
 }
 
-/** Interesses exibidos na secao "sobre". */
+/** Interesses exibidos na seção "sobre". */
 export const interests: Record<Lang, string[]> = {
   pt: [
     'Videogames',

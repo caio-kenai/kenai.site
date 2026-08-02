@@ -17,9 +17,7 @@ function renderEntry(entry: JourneyEntry, index: number): string {
     ? `<p class="jrn__location" ${loc(entry.location)}>${lt(entry.location)}</p>`
     : '';
 
-  // Em algo em curso a etiqueta ja comunica o periodo; exibir os dois lado a
-  // lado repetiria a mesma palavra. Um curso esta "em andamento", um cargo
-  // esta "atual", entao a etiqueta muda conforme o tipo de entrada.
+  // em curso, a etiqueta substitui o período: curso usa "próximo passo", cargo usa "atual"
   const ongoingKey = entry.kind === 'education' ? ('journey.ongoing' as const) : ('journey.current' as const);
   const timing = entry.current
     ? `<span class="jrn__badge">
@@ -63,7 +61,6 @@ export function renderJourney(): string {
 
         <ol class="jrn__list">${journey.map(renderEntry).join('')}</ol>
 
-        <!-- Link e Zelda fecham a trilha, um em cada ponta. -->
         <div class="jrn__walkers reveal">
           ${sprite(sprites.link, { height: '7.5rem' })}
           ${sprite(sprites.zelda, { height: '7.5rem' })}

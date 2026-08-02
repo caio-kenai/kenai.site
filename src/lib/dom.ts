@@ -2,7 +2,7 @@ import { translate, type StringKey } from '../data/i18n';
 import type { Localized } from '../data/types';
 import { getLang, onLangChange } from './state';
 
-/** Escapa texto para uso seguro em conteudo e atributos HTML. */
+/** Escapa texto para conteúdo e atributos HTML. */
 export function esc(value: string): string {
   return value
     .replace(/&/g, '&amp;')
@@ -11,30 +11,27 @@ export function esc(value: string): string {
     .replace(/"/g, '&quot;');
 }
 
-/** Traduz uma chave usando o idioma ativo. */
+/** Traduz no idioma ativo. */
 export function t(key: StringKey): string {
   return translate(getLang(), key);
 }
 
-/**
- * Marca um elemento como traduzivel por chave. O texto e trocado no lugar
- * quando o idioma muda, sem reconstruir a arvore nem perder o scroll.
- */
+/** Marca o elemento para ter o texto trocado na mudança de idioma. */
 export function tx(key: StringKey): string {
   return `data-i18n="${key}"`;
 }
 
-/** Marca um atributo traduzivel, ex.: `ta('aria-label', 'nav.aria')`. */
+/** Atributo traduzível, ex.: `ta('aria-label', 'nav.aria')`. */
 export function ta(attr: string, key: StringKey): string {
   return `data-i18n-attr="${attr}:${key}"`;
 }
 
-/** Marca um texto vindo dos dados, ja disponivel nos dois idiomas. */
+/** Texto que já vem dos dados nos dois idiomas. */
 export function loc(value: Localized): string {
   return `data-t-pt="${esc(value.pt)}" data-t-en="${esc(value.en)}"`;
 }
 
-/** Texto localizado no idioma ativo, ja escapado. */
+/** Texto localizado e escapado. */
 export function lt(value: Localized): string {
   return esc(value[getLang()]);
 }
@@ -50,7 +47,7 @@ export function qsa<T extends Element = HTMLElement>(
   return Array.from(root.querySelectorAll<T>(selector));
 }
 
-/** Reaplica todas as traducoes da arvore para o idioma ativo. */
+/** Reaplica as traduções da árvore. */
 export function applyTranslations(root: ParentNode = document): void {
   const lang = getLang();
 
@@ -75,7 +72,7 @@ export function applyTranslations(root: ParentNode = document): void {
   });
 }
 
-/** Mantem a arvore sincronizada com o idioma escolhido. */
+/** Mantém a árvore sincronizada com o idioma. */
 export function initTranslations(): void {
   onLangChange(() => applyTranslations());
 }

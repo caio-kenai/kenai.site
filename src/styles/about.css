@@ -17,8 +17,7 @@
   line-height: 1.85;
 }
 
-/* primeira letra do bloco, como abertura editorial.
-   O seletor filho evita que a capitular caia em outros paragrafos aninhados. */
+/* capitular. O seletor filho impede que caia em parágrafos aninhados */
 .about__text > p:first-child::first-letter {
   font-family: var(--font-display);
   font-size: 2.4em;
@@ -56,7 +55,7 @@
   top: 5.5rem;
 }
 
-/* companheiro solto na coluna lateral, sem moldura */
+/* sprite na coluna lateral */
 .about__companion {
   display: flex;
   justify-content: center;
@@ -64,7 +63,7 @@
 }
 
 /* ==========================================================================
-   METRICAS
+   MÉTRICAS
    ========================================================================== */
 
 .about__stats {

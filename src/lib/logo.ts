@@ -10,13 +10,7 @@ interface LogoOptions {
   size?: number;
 }
 
-/**
- * Logo de uma tecnologia ou servico. Os arquivos ficam em public/icons e sao
- * servidos pelo proprio dominio, sem nenhum icone vindo de CDN.
- *
- * Tecnologias sem logo publico caem num monograma, para a grade nao ficar
- * com buracos.
- */
+/** Logo de tecnologia ou serviço. Sem slug, cai no monograma. */
 export function logo({
   name,
   slug,

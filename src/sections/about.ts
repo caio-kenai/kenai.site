@@ -7,7 +7,7 @@ import { sprite } from '../lib/sprite';
 import { getLang, onLangChange } from '../lib/state';
 import type { StringKey } from '../data/i18n';
 
-/** Metricas derivadas dos dados reais do site, nenhuma delas estimada. */
+/** Métricas derivadas dos dados do site. */
 const stats: { value: string; key: StringKey }[] = [
   { value: '2021', key: 'about.stats.since' },
   { value: String(selfHostedCount), key: 'about.stats.services' },

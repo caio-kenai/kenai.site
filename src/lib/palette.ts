@@ -25,8 +25,7 @@ const groupLabel: Record<Group, StringKey> = {
 function goTo(hash: string): void {
   const target = document.querySelector(hash);
   if (!target) return;
-  // O scroll sai numa tarefa separada: disparado no mesmo passo em que o
-  // dialogo e desmontado, o navegador cancela a rolagem suave no meio.
+  // no mesmo passo do fechamento do diálogo o navegador cancela a rolagem
   window.setTimeout(() => {
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }, 0);
@@ -91,7 +90,7 @@ const commands: Command[] = [
   },
 ];
 
-/** Normaliza para busca tolerante a acento e caixa. */
+/** Normaliza para busca sem acento e sem caixa. */
 function fold(value: string): string {
   return value
     .normalize('NFD')
@@ -232,8 +231,7 @@ export function closePalette(): void {
   if (!root || root.hidden) return;
   root.hidden = true;
   document.body.style.overflow = '';
-  // Sem preventScroll o navegador rola ate o elemento que recebe o foco de
-  // volta, o que cancelaria a navegacao disparada pelo comando escolhido.
+  // sem preventScroll o foco de volta rola a página e cancela a navegação
   lastFocused?.focus({ preventScroll: true });
 }
 
@@ -257,8 +255,7 @@ export function initPalette(): void {
     }
 
     const item = target.closest<HTMLElement>('.palette__item');
-    // O indice do primeiro item e "0": comparar com undefined evita que ele
-    // seja descartado por ser uma string falsy.
+    // dataset.index do primeiro item é "0", que é falsy
     if (item?.dataset.index !== undefined) {
       cursor = Number(item.dataset.index);
       runCurrent();
@@ -284,7 +281,7 @@ export function initPalette(): void {
         runCurrent();
         break;
       case 'Tab':
-        // O dialogo tem um unico ponto de entrada: o foco fica no campo.
+        // foco preso no campo
         event.preventDefault();
         break;
       default:

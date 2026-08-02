@@ -1,5 +1,5 @@
 /* ==========================================================================
-   FONTES (self-hosted — o site nao faz nenhuma requisicao a terceiros)
+   FONTES, servidas pelo próprio domínio
    ========================================================================== */
 
 @font-face {
@@ -40,7 +40,7 @@
   unicode-range: U+0100-02BA, U+1E00-1EFF, U+2020, U+20A0-20AB, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
-/* JetBrains Mono e variavel: um arquivo cobre toda a faixa de peso. */
+/* JetBrains Mono é variável: um arquivo cobre toda a faixa de peso */
 @font-face {
   font-family: 'JetBrains Mono';
   font-style: normal;
@@ -65,7 +65,7 @@
    ========================================================================== */
 
 :root {
-  /* -- tipografia -- */
+  /* tipografia */
   --font-display: 'Chakra Petch', 'Segoe UI', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', 'Consolas', monospace;
 
@@ -76,12 +76,12 @@
   --step-3: clamp(1.9rem, 1.4rem + 2.4vw, 3.4rem);
   --step-4: clamp(2.4rem, 1.5rem + 4.2vw, 5rem);
 
-  /* -- espacamento -- */
+  /* espaçamento */
   --gutter: clamp(1.25rem, 0.6rem + 2.6vw, 2.75rem);
   --section-y: clamp(4.5rem, 3rem + 6vw, 7.5rem);
   --maxw: 1180px;
 
-  /* -- movimento -- */
+  /* movimento */
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --dur-fast: 0.16s;
   --dur: 0.28s;
@@ -91,7 +91,7 @@
   --border: 1px;
 }
 
-/* -- tema escuro (padrao) -- */
+/* tema escuro, padrão */
 :root,
 [data-theme='dark'] {
   --bg: #0b0d0e;
@@ -117,7 +117,7 @@
   --grid-line: rgba(232, 236, 236, 0.045);
 }
 
-/* -- tema claro -- */
+/* tema claro */
 [data-theme='light'] {
   --bg: #f3f5f4;
   --bg-rgb: 243, 245, 244;
@@ -130,7 +130,7 @@
   --line: rgba(12, 18, 17, 0.14);
   --line-strong: rgba(12, 18, 17, 0.26);
 
-  /* teal mais escuro: garante contraste AA sobre fundo claro */
+  /* teal mais escuro para manter contraste AA no fundo claro */
   --accent: #0a7d74;
   --accent-rgb: 10, 125, 116;
   --accent-soft: rgba(10, 125, 116, 0.1);

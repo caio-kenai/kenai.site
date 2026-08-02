@@ -1,50 +1,50 @@
-kenai.dev — portfolio pessoal de Caio Oliveira Pacifico
-Copyright (C) 2026 Caio Oliveira Pacifico
+kenai.dev, portfólio pessoal de Caio Oliveira Pacífico
+Copyright (C) 2026 Caio Oliveira Pacífico
 
-Este programa e software livre: voce pode redistribui-lo e/ou modifica-lo sob
+Este programa é software livre: você pode redistribuí-lo e/ou modificá-lo sob
 os termos da GNU Affero General Public License, conforme publicada pela Free
-Software Foundation, na versao 3 da licenca.
+Software Foundation, na versão 3 da licença.
 
-Este programa e distribuido na esperanca de que seja util, mas SEM NENHUMA
-GARANTIA; sem mesmo a garantia implicita de COMERCIABILIDADE ou ADEQUACAO A
-UM PROPOSITO ESPECIFICO. Veja a GNU Affero General Public License para mais
+Este programa é distribuído na esperança de que seja útil, mas SEM NENHUMA
+GARANTIA; sem mesmo a garantia implícita de COMERCIABILIDADE ou ADEQUAÇÃO A
+UM PROPÓSITO ESPECÍFICO. Veja a GNU Affero General Public License para mais
 detalhes.
 
-Voce deve ter recebido uma copia da GNU Affero General Public License junto
-com este programa. Se nao, veja <https://www.gnu.org/licenses/>.
+Você deve ter recebido uma cópia da GNU Affero General Public License junto
+com este programa. Se não, veja <https://www.gnu.org/licenses/>.
 
 
 ================================================================================
 O QUE A AGPL COBRE AQUI
 ================================================================================
 
-A licenca se aplica ao CODIGO deste repositorio: os arquivos em src/, a
-configuracao de build, o HTML e as folhas de estilo. Fique a vontade para ler,
-estudar, adaptar e usar como base do seu proprio portfolio.
+A licença se aplica ao CÓDIGO deste repositório: os arquivos em src/, a
+configuração de build, o HTML e as folhas de estilo. Fique à vontade para ler,
+estudar, adaptar e usar como base do seu próprio portfólio.
 
-O que a AGPL exige de quem reutiliza: se voce modificar este codigo e
-disponibilizar o resultado em um servidor acessivel ao publico, precisa
-oferecer o codigo-fonte da sua versao aos usuarios desse servidor.
+O que a AGPL exige de quem reutiliza: se você modificar este código e
+disponibilizar o resultado em um servidor acessível ao público, precisa
+oferecer o código-fonte da sua versão aos usuários desse servidor.
 
 
 ================================================================================
-O QUE NAO ESTA LICENCIADO
+O QUE NÃO ESTÁ LICENCIADO
 ================================================================================
 
-Os itens abaixo sao conteudo pessoal, nao codigo, e NAO estao cobertos pela
-AGPL nem por qualquer outra licenca de uso. Todos os direitos reservados:
+Os itens abaixo são conteúdo pessoal, não código, e NÃO estão cobertos pela
+AGPL nem por qualquer outra licença de uso. Todos os direitos reservados:
 
-  - A ilustracao em art/caio-arte.png, retrato do autor, encomendado por ele.
-    Nao reutilize, redistribua nem crie derivados dessa imagem.
+  - A ilustração em art/caio-arte.png, retrato do autor, encomendado por ele.
+    Não reutilize, redistribua nem crie derivados dessa imagem.
 
-  - O texto biografico, a trajetoria profissional, a descricao das
-    experiencias e a lista de formacao presentes em src/data/ — sao dados
+  - O texto biográfico, a trajetória profissional, a descrição das
+    experiências e a lista de formação presentes em src/data/, que são dados
     pessoais do autor.
 
-  - O nome "Caio Oliveira Pacifico", a marca "kenai.dev" e o dominio
+  - O nome "Caio Oliveira Pacífico", a marca "kenai.dev" e o domínio
     kenai.site.
 
-Se voce for usar este projeto como base, troque esses itens pelos seus. E
+Se você for usar este projeto como base, troque esses itens pelos seus. É
 justamente o que os arquivos em src/data/ facilitam.
 
 
@@ -55,11 +55,12 @@ TERCEIROS
   - Fontes: JetBrains Mono e Chakra Petch, ambas sob SIL Open Font License 1.1.
     Arquivos em public/fonts/.
 
-  - Logos de tecnologias em public/icons/tech/: projeto Devicon, licenca MIT.
+  - Logos de tecnologias em public/icons/tech/: projeto Devicon, licença MIT.
 
-  - Logos em public/icons/lab/: projeto Simple Icons, licenca CC0 1.0.
+  - Logos em public/icons/lab/: projeto Simple Icons, licença CC0 1.0, além de
+    marcas fornecidas pelos próprios projetos.
 
-  - As marcas e logotipos representados por esses icones pertencem aos seus
+  - As marcas e logotipos representados por esses ícones pertencem aos seus
     respectivos detentores e aparecem aqui apenas para identificar as
     tecnologias e os projetos citados.
 
@@ -68,11 +69,13 @@ TERCEIROS
 PERSONAGENS EM public/sprites/ E art/sprites/
 ================================================================================
 
-Os sprites de Link, Zelda, Zero, Gengar e Absol sao personagens protegidos por
-direito autoral de terceiros. Link e Zelda pertencem a Nintendo. Zero pertence a
-Capcom. Gengar e Absol pertencem a Nintendo, Game Freak e The Pokemon Company.
+Os sprites de Link, Zelda, Zero, Gengar e Absol são personagens protegidos por
+direito autoral de terceiros. Link e Zelda pertencem à Nintendo. Zero pertence
+à Capcom. Gengar e Absol pertencem à Nintendo, Game Freak e The Pokémon
+Company.
 
-Eles aparecem neste site como referencia pessoal, do mesmo jeito que sao citados
-no texto da secao "sobre". NAO estao licenciados sob a AGPL, nao sao de autoria
-do titular deste repositorio e nao acompanham nenhuma permissao de reuso. Quem
-usar este projeto como base deve remove-los ou substitui-los por arte propria.
+Eles aparecem neste site como referência pessoal, do mesmo jeito que são
+citados no texto da seção "sobre". NÃO estão licenciados sob a AGPL, não são de
+autoria do titular deste repositório e não acompanham nenhuma permissão de
+reuso. Quem usar este projeto como base deve removê-los ou substituí-los por
+arte própria.

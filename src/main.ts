@@ -26,20 +26,14 @@ import { renderJourney } from './sections/journey';
 import { initContact, renderContact } from './sections/contact';
 import { renderFooter } from './sections/footer';
 
-/**
- * As secoes so existem depois que o script monta a pagina, entao o navegador
- * nao encontra o alvo de um link com ancora durante o carregamento, e a
- * restauracao automatica de scroll pode parar numa posicao vazia. O ajuste
- * fica por conta desta funcao, ja com a arvore montada.
- */
+/** Resolve a âncora depois da montagem, já que as seções não existem no carregamento. */
 function restorePosition(): void {
   const hash = window.location.hash;
   const target = hash.length > 1 ? document.querySelector(hash) : null;
 
   const jump = () => {
     if (target) {
-      // 'instant' ignora o scroll-behavior: smooth do CSS. Com 'auto' a
-      // chegada vira um deslize longo desde o topo, que se perde no caminho.
+      // 'instant' ignora o scroll-behavior: smooth do CSS
       target.scrollIntoView({ behavior: 'instant', block: 'start' });
     } else {
       window.scrollTo({ top: 0, behavior: 'instant' });
@@ -47,8 +41,7 @@ function restorePosition(): void {
   };
 
   jump();
-  // As fontes terminam de carregar depois da primeira pintura e mudam a
-  // altura das secoes; a segunda passada corrige o destino.
+  // as fontes mudam a altura das seções depois da primeira pintura
   requestAnimationFrame(() => requestAnimationFrame(jump));
 }
 

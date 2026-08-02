@@ -1,4 +1,4 @@
-/* -- filtros -- */
+/* filtros */
 .proj__filters {
   display: flex;
   flex-wrap: wrap;
@@ -29,7 +29,7 @@
   color: var(--on-accent);
 }
 
-/* -- grade -- */
+/* grade */
 .proj__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
@@ -143,7 +143,7 @@
   text-decoration: underline;
 }
 
-/* -- estado vazio -- */
+/* estado vazio */
 .proj__empty {
   display: grid;
   justify-items: center;

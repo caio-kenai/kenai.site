@@ -1,9 +1,6 @@
 import type { HomelabEntry } from './types';
 
-/**
- * Servicos que eu mesmo hospedo. Cada um substitui um servico de terceiros
- * por uma alternativa aberta rodando na minha propria infraestrutura.
- */
+/** Serviços que rodam na minha infraestrutura. */
 export const selfHosted: HomelabEntry[] = [
   {
     name: 'Nextcloud',
@@ -135,10 +132,7 @@ export const selfHosted: HomelabEntry[] = [
   },
 ];
 
-/**
- * Software livre que uso no dia a dia. Roda no meu computador ou celular,
- * nao e servico hospedado, por isso fica separado da lista acima.
- */
+/** Software livre de uso diário. Roda local, não é serviço hospedado. */
 export const dailyDrivers: HomelabEntry[] = [
   {
     name: 'Firefox',

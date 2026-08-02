@@ -5,7 +5,7 @@ export interface NavLink {
   key: StringKey;
 }
 
-/** Ancoras da navegacao, reaproveitadas pela paleta de comandos. */
+/** Âncoras da navegação, reaproveitadas pela paleta de comandos. */
 export const navLinks: NavLink[] = [
   { href: '#sobre', key: 'nav.about' },
   { href: '#stack', key: 'nav.stack' },

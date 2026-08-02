@@ -1,10 +1,10 @@
 # kenai.dev
 
-Portfolio pessoal de **Caio Oliveira Pacifico**, publicado em [kenai.site](https://kenai.site).
+Portfólio pessoal de **Caio Oliveira Pacífico**, publicado em [kenai.site](https://kenai.site).
 
-Uma pagina unica, bilingue (PT-BR / EN), com tema claro e escuro, construida sem framework de
-interface e sem nenhuma requisicao a terceiros: as fontes sao servidas pelo proprio dominio, os
-icones sao SVG embutidos no bundle e nao ha CDN, analytics nem cookies.
+Página única, bilíngue (PT-BR / EN), com tema claro e escuro. Sem framework de interface e sem
+nenhuma requisição a terceiros: as fontes são servidas pelo próprio domínio, os ícones são SVG
+embutidos no bundle e não há CDN, analytics nem cookies.
 
 ## Stack
 
@@ -14,39 +14,41 @@ icones sao SVG embutidos no bundle e nao ha CDN, analytics nem cookies.
 | Linguagem | TypeScript em modo estrito |
 | Interface | DOM nativo, sem framework |
 | Estilo | CSS puro com custom properties |
-| Dependencias de runtime | nenhuma |
+| Dependências de runtime | nenhuma |
 
 ## Como rodar
 
 ```bash
 npm install
 npm run dev        # servidor de desenvolvimento em http://localhost:5173
-npm run build      # checagem de tipos + build de producao em dist/
+npm run build      # checagem de tipos e build de produção em dist/
 npm run preview    # serve o resultado do build
 npm run typecheck  # apenas a checagem de tipos
 ```
 
-O build gera arquivos estaticos em `dist/`, sem dependencia de servidor de aplicacao.
+O build gera arquivos estáticos em `dist/`.
 
 ## Estrutura
 
 ```
 src/
-  data/        conteudo do site (perfil, stack, homelab, jornada, projetos, traducoes)
-  lib/         estado, traducoes, paleta de comandos, revelacao ao rolar, icones
-  sections/    uma funcao de renderizacao por secao da pagina
-  styles/      tokens de design e estilo por secao
+  data/        conteúdo do site (perfil, stack, homelab, jornada, projetos, traduções)
+  lib/         estado, traduções, paleta de comandos, revelação ao rolar, ícones, sprites
+  sections/    uma função de renderização por seção
+  styles/      tokens de design e estilo por seção
 public/
-  fonts/       fontes self-hosted em woff2
+  fonts/       fontes em woff2
+  icons/       logos de tecnologias e serviços
+  sprites/     personagens em pixel art
 ```
 
-Todo o conteudo vive em `src/data`. As secoes apenas leem esses arquivos, entao editar o site nao
-exige mexer em marcacao.
+Todo o conteúdo fica em `src/data`. As seções apenas leem esses arquivos, então editar o site não
+exige mexer em marcação.
 
 ### Adicionar um projeto
 
-Basta acrescentar um objeto a `src/data/projects.ts`. A grade, os filtros por categoria e o estado
-vazio se ajustam sozinhos:
+Acrescente um objeto a `src/data/projects.ts`. A grade, os filtros por categoria e o estado vazio
+se ajustam sozinhos:
 
 ```ts
 {
@@ -61,35 +63,35 @@ vazio se ajustam sozinhos:
 
 ### Adicionar um idioma
 
-As chaves de texto ficam em `src/data/i18n.ts`. O tipo `StringKey` garante em tempo de compilacao
+As chaves de texto ficam em `src/data/i18n.ts`. O tipo `StringKey` garante em tempo de compilação
 que nenhum idioma fique com chave faltando.
 
-## Traducao sem reconstruir a pagina
+## Troca de idioma sem remontar o DOM
 
-Trocar o idioma nao remonta a arvore do DOM. Os elementos carregam `data-i18n` (chave de traducao)
-ou `data-t-pt` / `data-t-en` (texto vindo dos dados), e apenas o conteudo de texto e substituido.
-Assim a posicao da rolagem, o foco e as animacoes ja disparadas sao preservados.
+Os elementos carregam `data-i18n` para chaves de tradução ou `data-t-pt` e `data-t-en` para texto
+vindo dos dados. Na troca, só o conteúdo de texto é substituído, então a posição da rolagem, o foco
+e as animações já disparadas continuam de pé.
 
 ## Acessibilidade
 
-- Navegacao completa por teclado, incluindo a paleta de comandos (`Ctrl` + `K`)
-- Link para pular direto ao conteudo principal
-- Estados de foco visiveis em todos os controles
-- `prefers-reduced-motion` desliga as animacoes
-- Paleta de cores com contraste verificado nos dois temas
+- Navegação completa por teclado, incluindo a paleta de comandos (`Ctrl` + `K`)
+- Link para pular direto ao conteúdo principal
+- Estados de foco visíveis em todos os controles
+- `prefers-reduced-motion` desliga as animações
+- Contraste das cores verificado nos dois temas
 
-## Publicacao
+## Publicação
 
-O resultado do build e estatico, entao serve em qualquer hospedagem de arquivos. O dominio
-`kenai.site` responde pelo site, e os projetos futuros ficam em subdominios.
+O build é estático e serve em qualquer hospedagem de arquivos. O domínio `kenai.site` responde pelo
+site, e os projetos futuros ficam em subdomínios.
 
-## Licenca
+## Licença
 
-O codigo esta sob a [GNU Affero General Public License v3](LICENSE). Leia, estude, adapte e use
-como base do seu proprio portfolio. A unica exigencia e que, se voce modificar e hospedar o
-resultado publicamente, o codigo-fonte da sua versao fique disponivel para quem usa aquele
-servidor. E a mesma licenca do Nextcloud e do Immich, dois dos servicos que rodam no meu homelab.
+O código está sob a [GNU Affero General Public License v3](LICENSE). Leia, estude, adapte e use como
+base do seu próprio portfólio. A única exigência é que, se você modificar e hospedar o resultado
+publicamente, o código-fonte da sua versão fique disponível para quem usa aquele servidor. É a mesma
+licença do Nextcloud e do Immich, dois dos serviços que rodam no meu homelab.
 
-A ilustracao, o texto biografico e a marca **nao** estao cobertos pela licenca. O [NOTICE](NOTICE)
-detalha o que e codigo livre e o que e conteudo pessoal reservado, alem dos creditos de fontes e
-icones de terceiros.
+A ilustração, o texto biográfico, os sprites e a marca **não** estão cobertos pela licença. O
+[NOTICE](NOTICE) detalha o que é código livre e o que é conteúdo reservado, além dos créditos de
+fontes, ícones e personagens de terceiros.

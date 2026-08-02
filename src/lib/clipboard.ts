@@ -1,10 +1,6 @@
 import { profile } from '../data/profile';
 
-/**
- * Copia um texto para a area de transferencia. Usa a Clipboard API quando
- * disponivel e recorre a um campo temporario nos contextos em que ela nao
- * existe (http sem TLS, navegadores mais antigos).
- */
+/** Clipboard API quando disponível, campo temporário nos demais contextos. */
 export async function copyText(value: string): Promise<boolean> {
   try {
     if (navigator.clipboard && window.isSecureContext) {
@@ -12,7 +8,7 @@ export async function copyText(value: string): Promise<boolean> {
       return true;
     }
   } catch {
-    // Permissao negada: cai para o metodo alternativo abaixo.
+    // permissão negada, tenta o método abaixo
   }
 
   try {
