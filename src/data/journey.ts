@@ -60,6 +60,22 @@ export const journey: JourneyEntry[] = [
     ],
   },
   {
+    id: 'pso',
+    kind: 'work',
+    org: 'PSO Engenharia Elétrica',
+    title: { pt: 'Estagiário de T.I', en: 'IT Intern' },
+    period: { pt: 'mar 2021 a ago 2021 · 6 meses', en: 'Mar 2021 to Aug 2021 · 6 months' },
+    location: {
+      pt: 'Ipatinga, Minas Gerais, Brasil · Presencial',
+      en: 'Ipatinga, Minas Gerais, Brazil · On-site',
+    },
+    description: {
+      pt: 'Participei de treinamentos e cursos voltados ao desenvolvimento full stack, com foco na construção de REST APIs e em operações CRUD. Aprimorei minha lógica de programação e construí uma base sólida em JavaScript, aplicando o ecossistema na prática com Node.js e Express na criação de APIs e Angular no front-end. Também tive contato com versionamento com Git, consumo de APIs, organização de código e os padrões fundamentais do desenvolvimento web moderno.',
+      en: 'I took part in training and courses focused on full stack development, centred on building REST APIs and CRUD operations. I sharpened my programming logic and built a solid JavaScript foundation, applying the ecosystem in practice with Node.js and Express for APIs and Angular on the front-end. I also worked with Git version control, API consumption, code organisation and the core patterns of modern web development.',
+    },
+    tags: ['JavaScript', 'Node.js', 'Express', 'Angular', 'REST APIs', 'Git'],
+  },
+  {
     id: 'puc-minas',
     kind: 'education',
     org: 'PUC Minas',
@@ -84,22 +100,6 @@ export const journey: JourneyEntry[] = [
       pt: 'Graduação em Sistemas de Informação. É de onde vem a base que sustenta o resto: estruturas de dados, engenharia de software, análise de sistemas, banco de dados e projeto de redes de computadores. A teoria que eu passei os anos seguintes aplicando em sistemas de verdade.',
       en: 'Information Systems degree. This is where the foundation under everything else comes from: data structures, software engineering, systems analysis, databases and computer network design. The theory I spent the following years applying to real systems.',
     },
-  },
-  {
-    id: 'pso',
-    kind: 'work',
-    org: 'PSO Engenharia Elétrica',
-    title: { pt: 'Estagiário de T.I', en: 'IT Intern' },
-    period: { pt: 'mar 2021 a ago 2021 · 6 meses', en: 'Mar 2021 to Aug 2021 · 6 months' },
-    location: {
-      pt: 'Ipatinga, Minas Gerais, Brasil · Presencial',
-      en: 'Ipatinga, Minas Gerais, Brazil · On-site',
-    },
-    description: {
-      pt: 'Participei de treinamentos e cursos voltados ao desenvolvimento full stack, com foco na construção de REST APIs e em operações CRUD. Aprimorei minha lógica de programação e construí uma base sólida em JavaScript, aplicando o ecossistema na prática com Node.js e Express na criação de APIs e Angular no front-end. Também tive contato com versionamento com Git, consumo de APIs, organização de código e os padrões fundamentais do desenvolvimento web moderno.',
-      en: 'I took part in training and courses focused on full stack development, centred on building REST APIs and CRUD operations. I sharpened my programming logic and built a solid JavaScript foundation, applying the ecosystem in practice with Node.js and Express for APIs and Angular on the front-end. I also worked with Git version control, API consumption, code organisation and the core patterns of modern web development.',
-    },
-    tags: ['JavaScript', 'Node.js', 'Express', 'Angular', 'REST APIs', 'Git'],
   },
   {
     id: 'fisk',
